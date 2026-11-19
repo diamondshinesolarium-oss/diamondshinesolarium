@@ -13,10 +13,10 @@ const LAYOUT = [
   "md:col-span-8 md:row-span-2",
   "md:col-span-4",
   "md:col-span-4",
-  "md:col-span-4 md:row-span-2",
+  "md:col-span-4",
   "md:col-span-8",
   "md:col-span-4",
-  "md:col-span-4",
+  "md:col-span-8",
 ];
 
 export function Gallery({ preview = false }: { preview?: boolean }) {

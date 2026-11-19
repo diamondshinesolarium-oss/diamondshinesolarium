@@ -14,6 +14,7 @@ export function pageHead(lang: Lang, key: PageKey, matches: AnyMatch[], image?: 
   const t = dictionaries[lang];
   const { title, description } = t.seo[key];
   const origin = originFrom(matches);
+  const path = PAGE_PATHS[key][lang];
   const meta: Record<string, string>[] = [
     { title },
     { name: "description", content: description },
@@ -27,6 +28,7 @@ export function pageHead(lang: Lang, key: PageKey, matches: AnyMatch[], image?: 
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
   ];
+  if (origin) meta.push({ property: "og:url", content: `${origin}${path}` });
   if (image && origin) {
     const abs = image.startsWith("http") ? image : `${origin}${image}`;
     meta.push(
@@ -39,12 +41,12 @@ export function pageHead(lang: Lang, key: PageKey, matches: AnyMatch[], image?: 
   if (key === "legal" || key === "privacy" || key === "cookies") {
     meta.push({ name: "robots", content: "noindex, follow" });
   }
-  return { meta };
+  return { meta, links: alternateLinks(path, origin, key) };
 }
 
 /** Canonical + hreflang links for the current page. */
 export function alternateLinks(pathname: string, origin: string, key: PageKey | null) {
-  if (!origin || !key) return [];
+  if (!key) return [];
   const links: { rel: string; href: string; hrefLang?: string }[] = [
     { rel: "canonical", href: `${origin}${pathname.replace(/\/+$/, "") || "/"}` },
   ];

@@ -7,13 +7,17 @@ export function Hours({ tone = "light", className }: { tone?: "light" | "dark"; 
   const t = useT();
   const open = site.hours.filter((h) => h.open);
   const closed = site.hours.filter((h) => !h.open);
-  const same = open.every((h) => h.open === open[0]?.open && h.close === open[0]?.close);
-  const rows: { label: string; value: string }[] = same
-    ? [
-        { label: `${t.location.days[open[0].day]} – ${t.location.days[open[open.length - 1].day]}`, value: `${open[0].open} – ${open[0].close}` },
-        ...closed.map((h) => ({ label: t.location.days[h.day], value: t.common.closed })),
-      ]
-    : site.hours.map((h) => ({ label: t.location.days[h.day], value: h.open ? `${h.open} – ${h.close}` : t.common.closed }));
+  const first = open[0];
+  const last = open[open.length - 1];
+  const day = (d: number) => t.location.days[d] ?? "";
+  const same = open.every((h) => h.open === first?.open && h.close === first?.close);
+  const rows: { label: string; value: string }[] =
+    same && first && last
+      ? [
+          { label: `${day(first.day)} – ${day(last.day)}`, value: `${first.open} – ${first.close}` },
+          ...closed.map((h) => ({ label: day(h.day), value: t.common.closed })),
+        ]
+      : site.hours.map((h) => ({ label: day(h.day), value: h.open ? `${h.open} – ${h.close}` : t.common.closed }));
 
   return (
     <dl className={cn("space-y-2 text-sm", className)}>

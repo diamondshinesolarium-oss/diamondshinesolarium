@@ -10,33 +10,323 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EnRouteImport } from './routes/en'
+import { Route as EsRouteImport } from './routes/es'
+import { Route as EnIndexRouteImport } from './routes/en.index'
+import { Route as EnContactRouteImport } from './routes/en.contact'
+import { Route as EnCookiePolicyRouteImport } from './routes/en.cookie-policy'
+import { Route as EnFaqRouteImport } from './routes/en.faq'
+import { Route as EnGalleryRouteImport } from './routes/en.gallery'
+import { Route as EnLegalNoticeRouteImport } from './routes/en.legal-notice'
+import { Route as EnOurStudioRouteImport } from './routes/en.our-studio'
+import { Route as EnPricesRouteImport } from './routes/en.prices'
+import { Route as EnPrivacyPolicyRouteImport } from './routes/en.privacy-policy'
+import { Route as EnTechnologyRouteImport } from './routes/en.technology'
+import { Route as EnUvSafetyRouteImport } from './routes/en.uv-safety'
+import { Route as EsIndexRouteImport } from './routes/es.index'
+import { Route as EsAvisoLegalRouteImport } from './routes/es.aviso-legal'
+import { Route as EsContactoRouteImport } from './routes/es.contacto'
+import { Route as EsElCentroRouteImport } from './routes/es.el-centro'
+import { Route as EsGaleriaRouteImport } from './routes/es.galeria'
+import { Route as EsPoliticaCookiesRouteImport } from './routes/es.politica-cookies'
+import { Route as EsPoliticaPrivacidadRouteImport } from './routes/es.politica-privacidad'
+import { Route as EsPreguntasFrecuentesRouteImport } from './routes/es.preguntas-frecuentes'
+import { Route as EsSeguridadUvRouteImport } from './routes/es.seguridad-uv'
+import { Route as EsTarifasRouteImport } from './routes/es.tarifas'
+import { Route as EsTecnologiaRouteImport } from './routes/es.tecnologia'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnRoute = EnRouteImport.update({
+  id: '/en',
+  path: '/en',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsRoute = EsRouteImport.update({
+  id: '/es',
+  path: '/es',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnIndexRoute = EnIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnContactRoute = EnContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnCookiePolicyRoute = EnCookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnFaqRoute = EnFaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnGalleryRoute = EnGalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnLegalNoticeRoute = EnLegalNoticeRouteImport.update({
+  id: '/legal-notice',
+  path: '/legal-notice',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnOurStudioRoute = EnOurStudioRouteImport.update({
+  id: '/our-studio',
+  path: '/our-studio',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnPricesRoute = EnPricesRouteImport.update({
+  id: '/prices',
+  path: '/prices',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnPrivacyPolicyRoute = EnPrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnTechnologyRoute = EnTechnologyRouteImport.update({
+  id: '/technology',
+  path: '/technology',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnUvSafetyRoute = EnUvSafetyRouteImport.update({
+  id: '/uv-safety',
+  path: '/uv-safety',
+  getParentRoute: () => EnRoute,
+} as any)
+const EsIndexRoute = EsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsAvisoLegalRoute = EsAvisoLegalRouteImport.update({
+  id: '/aviso-legal',
+  path: '/aviso-legal',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsContactoRoute = EsContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsElCentroRoute = EsElCentroRouteImport.update({
+  id: '/el-centro',
+  path: '/el-centro',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsGaleriaRoute = EsGaleriaRouteImport.update({
+  id: '/galeria',
+  path: '/galeria',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsPoliticaCookiesRoute = EsPoliticaCookiesRouteImport.update({
+  id: '/politica-cookies',
+  path: '/politica-cookies',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsPoliticaPrivacidadRoute = EsPoliticaPrivacidadRouteImport.update({
+  id: '/politica-privacidad',
+  path: '/politica-privacidad',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsPreguntasFrecuentesRoute = EsPreguntasFrecuentesRouteImport.update({
+  id: '/preguntas-frecuentes',
+  path: '/preguntas-frecuentes',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsSeguridadUvRoute = EsSeguridadUvRouteImport.update({
+  id: '/seguridad-uv',
+  path: '/seguridad-uv',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsTarifasRoute = EsTarifasRouteImport.update({
+  id: '/tarifas',
+  path: '/tarifas',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsTecnologiaRoute = EsTecnologiaRouteImport.update({
+  id: '/tecnologia',
+  path: '/tecnologia',
+  getParentRoute: () => EsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/en': typeof EnRouteWithChildren
+  '/es': typeof EsRouteWithChildren
+  '/en/contact': typeof EnContactRoute
+  '/en/cookie-policy': typeof EnCookiePolicyRoute
+  '/en/faq': typeof EnFaqRoute
+  '/en/gallery': typeof EnGalleryRoute
+  '/en/legal-notice': typeof EnLegalNoticeRoute
+  '/en/our-studio': typeof EnOurStudioRoute
+  '/en/prices': typeof EnPricesRoute
+  '/en/privacy-policy': typeof EnPrivacyPolicyRoute
+  '/en/technology': typeof EnTechnologyRoute
+  '/en/uv-safety': typeof EnUvSafetyRoute
+  '/es/aviso-legal': typeof EsAvisoLegalRoute
+  '/es/contacto': typeof EsContactoRoute
+  '/es/el-centro': typeof EsElCentroRoute
+  '/es/galeria': typeof EsGaleriaRoute
+  '/es/politica-cookies': typeof EsPoliticaCookiesRoute
+  '/es/politica-privacidad': typeof EsPoliticaPrivacidadRoute
+  '/es/preguntas-frecuentes': typeof EsPreguntasFrecuentesRoute
+  '/es/seguridad-uv': typeof EsSeguridadUvRoute
+  '/es/tarifas': typeof EsTarifasRoute
+  '/es/tecnologia': typeof EsTecnologiaRoute
+  '/en/': typeof EnIndexRoute
+  '/es/': typeof EsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/en/contact': typeof EnContactRoute
+  '/en/cookie-policy': typeof EnCookiePolicyRoute
+  '/en/faq': typeof EnFaqRoute
+  '/en/gallery': typeof EnGalleryRoute
+  '/en/legal-notice': typeof EnLegalNoticeRoute
+  '/en/our-studio': typeof EnOurStudioRoute
+  '/en/prices': typeof EnPricesRoute
+  '/en/privacy-policy': typeof EnPrivacyPolicyRoute
+  '/en/technology': typeof EnTechnologyRoute
+  '/en/uv-safety': typeof EnUvSafetyRoute
+  '/es/aviso-legal': typeof EsAvisoLegalRoute
+  '/es/contacto': typeof EsContactoRoute
+  '/es/el-centro': typeof EsElCentroRoute
+  '/es/galeria': typeof EsGaleriaRoute
+  '/es/politica-cookies': typeof EsPoliticaCookiesRoute
+  '/es/politica-privacidad': typeof EsPoliticaPrivacidadRoute
+  '/es/preguntas-frecuentes': typeof EsPreguntasFrecuentesRoute
+  '/es/seguridad-uv': typeof EsSeguridadUvRoute
+  '/es/tarifas': typeof EsTarifasRoute
+  '/es/tecnologia': typeof EsTecnologiaRoute
+  '/en': typeof EnIndexRoute
+  '/es': typeof EsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/en': typeof EnRouteWithChildren
+  '/es': typeof EsRouteWithChildren
+  '/en/contact': typeof EnContactRoute
+  '/en/cookie-policy': typeof EnCookiePolicyRoute
+  '/en/faq': typeof EnFaqRoute
+  '/en/gallery': typeof EnGalleryRoute
+  '/en/legal-notice': typeof EnLegalNoticeRoute
+  '/en/our-studio': typeof EnOurStudioRoute
+  '/en/prices': typeof EnPricesRoute
+  '/en/privacy-policy': typeof EnPrivacyPolicyRoute
+  '/en/technology': typeof EnTechnologyRoute
+  '/en/uv-safety': typeof EnUvSafetyRoute
+  '/es/aviso-legal': typeof EsAvisoLegalRoute
+  '/es/contacto': typeof EsContactoRoute
+  '/es/el-centro': typeof EsElCentroRoute
+  '/es/galeria': typeof EsGaleriaRoute
+  '/es/politica-cookies': typeof EsPoliticaCookiesRoute
+  '/es/politica-privacidad': typeof EsPoliticaPrivacidadRoute
+  '/es/preguntas-frecuentes': typeof EsPreguntasFrecuentesRoute
+  '/es/seguridad-uv': typeof EsSeguridadUvRoute
+  '/es/tarifas': typeof EsTarifasRoute
+  '/es/tecnologia': typeof EsTecnologiaRoute
+  '/en/': typeof EnIndexRoute
+  '/es/': typeof EsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/en'
+    | '/es'
+    | '/en/contact'
+    | '/en/cookie-policy'
+    | '/en/faq'
+    | '/en/gallery'
+    | '/en/legal-notice'
+    | '/en/our-studio'
+    | '/en/prices'
+    | '/en/privacy-policy'
+    | '/en/technology'
+    | '/en/uv-safety'
+    | '/es/aviso-legal'
+    | '/es/contacto'
+    | '/es/el-centro'
+    | '/es/galeria'
+    | '/es/politica-cookies'
+    | '/es/politica-privacidad'
+    | '/es/preguntas-frecuentes'
+    | '/es/seguridad-uv'
+    | '/es/tarifas'
+    | '/es/tecnologia'
+    | '/en/'
+    | '/es/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/en/contact'
+    | '/en/cookie-policy'
+    | '/en/faq'
+    | '/en/gallery'
+    | '/en/legal-notice'
+    | '/en/our-studio'
+    | '/en/prices'
+    | '/en/privacy-policy'
+    | '/en/technology'
+    | '/en/uv-safety'
+    | '/es/aviso-legal'
+    | '/es/contacto'
+    | '/es/el-centro'
+    | '/es/galeria'
+    | '/es/politica-cookies'
+    | '/es/politica-privacidad'
+    | '/es/preguntas-frecuentes'
+    | '/es/seguridad-uv'
+    | '/es/tarifas'
+    | '/es/tecnologia'
+    | '/en'
+    | '/es'
+  id:
+    | '__root__'
+    | '/'
+    | '/en'
+    | '/es'
+    | '/en/contact'
+    | '/en/cookie-policy'
+    | '/en/faq'
+    | '/en/gallery'
+    | '/en/legal-notice'
+    | '/en/our-studio'
+    | '/en/prices'
+    | '/en/privacy-policy'
+    | '/en/technology'
+    | '/en/uv-safety'
+    | '/es/aviso-legal'
+    | '/es/contacto'
+    | '/es/el-centro'
+    | '/es/galeria'
+    | '/es/politica-cookies'
+    | '/es/politica-privacidad'
+    | '/es/preguntas-frecuentes'
+    | '/es/seguridad-uv'
+    | '/es/tarifas'
+    | '/es/tecnologia'
+    | '/en/'
+    | '/es/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EnRoute: typeof EnRouteWithChildren
+  EsRoute: typeof EsRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +338,241 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/en': {
+      id: '/en'
+      path: '/en'
+      fullPath: '/en'
+      preLoaderRoute: typeof EnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es': {
+      id: '/es'
+      path: '/es'
+      fullPath: '/es'
+      preLoaderRoute: typeof EsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/': {
+      id: '/en/'
+      path: '/'
+      fullPath: '/en/'
+      preLoaderRoute: typeof EnIndexRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/contact': {
+      id: '/en/contact'
+      path: '/contact'
+      fullPath: '/en/contact'
+      preLoaderRoute: typeof EnContactRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/cookie-policy': {
+      id: '/en/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/en/cookie-policy'
+      preLoaderRoute: typeof EnCookiePolicyRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/faq': {
+      id: '/en/faq'
+      path: '/faq'
+      fullPath: '/en/faq'
+      preLoaderRoute: typeof EnFaqRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/gallery': {
+      id: '/en/gallery'
+      path: '/gallery'
+      fullPath: '/en/gallery'
+      preLoaderRoute: typeof EnGalleryRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/legal-notice': {
+      id: '/en/legal-notice'
+      path: '/legal-notice'
+      fullPath: '/en/legal-notice'
+      preLoaderRoute: typeof EnLegalNoticeRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/our-studio': {
+      id: '/en/our-studio'
+      path: '/our-studio'
+      fullPath: '/en/our-studio'
+      preLoaderRoute: typeof EnOurStudioRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/prices': {
+      id: '/en/prices'
+      path: '/prices'
+      fullPath: '/en/prices'
+      preLoaderRoute: typeof EnPricesRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/privacy-policy': {
+      id: '/en/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/en/privacy-policy'
+      preLoaderRoute: typeof EnPrivacyPolicyRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/technology': {
+      id: '/en/technology'
+      path: '/technology'
+      fullPath: '/en/technology'
+      preLoaderRoute: typeof EnTechnologyRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/uv-safety': {
+      id: '/en/uv-safety'
+      path: '/uv-safety'
+      fullPath: '/en/uv-safety'
+      preLoaderRoute: typeof EnUvSafetyRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/es/': {
+      id: '/es/'
+      path: '/'
+      fullPath: '/es/'
+      preLoaderRoute: typeof EsIndexRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/aviso-legal': {
+      id: '/es/aviso-legal'
+      path: '/aviso-legal'
+      fullPath: '/es/aviso-legal'
+      preLoaderRoute: typeof EsAvisoLegalRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/contacto': {
+      id: '/es/contacto'
+      path: '/contacto'
+      fullPath: '/es/contacto'
+      preLoaderRoute: typeof EsContactoRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/el-centro': {
+      id: '/es/el-centro'
+      path: '/el-centro'
+      fullPath: '/es/el-centro'
+      preLoaderRoute: typeof EsElCentroRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/galeria': {
+      id: '/es/galeria'
+      path: '/galeria'
+      fullPath: '/es/galeria'
+      preLoaderRoute: typeof EsGaleriaRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/politica-cookies': {
+      id: '/es/politica-cookies'
+      path: '/politica-cookies'
+      fullPath: '/es/politica-cookies'
+      preLoaderRoute: typeof EsPoliticaCookiesRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/politica-privacidad': {
+      id: '/es/politica-privacidad'
+      path: '/politica-privacidad'
+      fullPath: '/es/politica-privacidad'
+      preLoaderRoute: typeof EsPoliticaPrivacidadRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/preguntas-frecuentes': {
+      id: '/es/preguntas-frecuentes'
+      path: '/preguntas-frecuentes'
+      fullPath: '/es/preguntas-frecuentes'
+      preLoaderRoute: typeof EsPreguntasFrecuentesRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/seguridad-uv': {
+      id: '/es/seguridad-uv'
+      path: '/seguridad-uv'
+      fullPath: '/es/seguridad-uv'
+      preLoaderRoute: typeof EsSeguridadUvRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/tarifas': {
+      id: '/es/tarifas'
+      path: '/tarifas'
+      fullPath: '/es/tarifas'
+      preLoaderRoute: typeof EsTarifasRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/tecnologia': {
+      id: '/es/tecnologia'
+      path: '/tecnologia'
+      fullPath: '/es/tecnologia'
+      preLoaderRoute: typeof EsTecnologiaRouteImport
+      parentRoute: typeof EsRoute
+    }
   }
 }
 
+interface EnRouteChildren {
+  EnContactRoute: typeof EnContactRoute
+  EnCookiePolicyRoute: typeof EnCookiePolicyRoute
+  EnFaqRoute: typeof EnFaqRoute
+  EnGalleryRoute: typeof EnGalleryRoute
+  EnLegalNoticeRoute: typeof EnLegalNoticeRoute
+  EnOurStudioRoute: typeof EnOurStudioRoute
+  EnPricesRoute: typeof EnPricesRoute
+  EnPrivacyPolicyRoute: typeof EnPrivacyPolicyRoute
+  EnTechnologyRoute: typeof EnTechnologyRoute
+  EnUvSafetyRoute: typeof EnUvSafetyRoute
+  EnIndexRoute: typeof EnIndexRoute
+}
+
+const EnRouteChildren: EnRouteChildren = {
+  EnContactRoute: EnContactRoute,
+  EnCookiePolicyRoute: EnCookiePolicyRoute,
+  EnFaqRoute: EnFaqRoute,
+  EnGalleryRoute: EnGalleryRoute,
+  EnLegalNoticeRoute: EnLegalNoticeRoute,
+  EnOurStudioRoute: EnOurStudioRoute,
+  EnPricesRoute: EnPricesRoute,
+  EnPrivacyPolicyRoute: EnPrivacyPolicyRoute,
+  EnTechnologyRoute: EnTechnologyRoute,
+  EnUvSafetyRoute: EnUvSafetyRoute,
+  EnIndexRoute: EnIndexRoute,
+}
+
+const EnRouteWithChildren = EnRoute._addFileChildren(EnRouteChildren)
+
+interface EsRouteChildren {
+  EsAvisoLegalRoute: typeof EsAvisoLegalRoute
+  EsContactoRoute: typeof EsContactoRoute
+  EsElCentroRoute: typeof EsElCentroRoute
+  EsGaleriaRoute: typeof EsGaleriaRoute
+  EsPoliticaCookiesRoute: typeof EsPoliticaCookiesRoute
+  EsPoliticaPrivacidadRoute: typeof EsPoliticaPrivacidadRoute
+  EsPreguntasFrecuentesRoute: typeof EsPreguntasFrecuentesRoute
+  EsSeguridadUvRoute: typeof EsSeguridadUvRoute
+  EsTarifasRoute: typeof EsTarifasRoute
+  EsTecnologiaRoute: typeof EsTecnologiaRoute
+  EsIndexRoute: typeof EsIndexRoute
+}
+
+const EsRouteChildren: EsRouteChildren = {
+  EsAvisoLegalRoute: EsAvisoLegalRoute,
+  EsContactoRoute: EsContactoRoute,
+  EsElCentroRoute: EsElCentroRoute,
+  EsGaleriaRoute: EsGaleriaRoute,
+  EsPoliticaCookiesRoute: EsPoliticaCookiesRoute,
+  EsPoliticaPrivacidadRoute: EsPoliticaPrivacidadRoute,
+  EsPreguntasFrecuentesRoute: EsPreguntasFrecuentesRoute,
+  EsSeguridadUvRoute: EsSeguridadUvRoute,
+  EsTarifasRoute: EsTarifasRoute,
+  EsTecnologiaRoute: EsTecnologiaRoute,
+  EsIndexRoute: EsIndexRoute,
+}
+
+const EsRouteWithChildren = EsRoute._addFileChildren(EsRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EnRoute: EnRouteWithChildren,
+  EsRoute: EsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -10,7 +10,7 @@ export function Intro() {
     { value: String(site.foundedYear), label: t.intro.stats.since },
     { value: site.google.rating.toLocaleString(t.meta.htmlLang), label: t.intro.stats.rating, star: true },
     { value: "Soltron · Ergoline", label: t.intro.stats.brands, small: true },
-    { value: "10 – 21h", label: t.intro.stats.hours },
+    { value: "10h · 21h", label: t.intro.stats.hours },
   ];
   return (
     <section id="intro" className="scroll-mt-24 py-24 md:py-36">

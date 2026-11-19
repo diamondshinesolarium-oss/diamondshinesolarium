@@ -13,7 +13,7 @@ export function Why() {
         <SectionHeading eyebrow={t.why.eyebrow} title={t.why.heading} />
         <ul className="mt-16 grid gap-x-12 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
           {t.why.items.map((item, i) => {
-            const Icon = ICONS[i];
+            const Icon = ICONS[i] ?? Sparkles;
             return (
               <Reveal as="li" key={item.title} delay={(i % 3) * 100} className="group border-t border-gold/40 pt-8 pb-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gold/50 text-gold-deep transition-colors duration-500 group-hover:bg-ink group-hover:text-gold">

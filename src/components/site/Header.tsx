@@ -35,51 +35,53 @@ export function Header() {
   }, [open]);
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 text-ink-foreground transition-all duration-700 ease-[var(--ease-luxe)]",
-        scrolled || open ? "bg-ink/92 py-3 backdrop-blur-md shadow-luxe" : "bg-transparent py-6",
-      )}
-    >
-      <div className="container-luxe flex items-center justify-between gap-6">
-        <LocalLink page="home" aria-label={`${site.name} — ${t.common.home}`}>
-          <Logo />
-        </LocalLink>
+    <>
+      <header
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 text-ink-foreground transition-all duration-700 ease-[var(--ease-luxe)]",
+          scrolled || open ? "bg-ink/92 py-3 backdrop-blur-md shadow-luxe" : "bg-transparent py-6",
+        )}
+      >
+        <div className="container-luxe flex items-center justify-between gap-6">
+          <LocalLink page="home" aria-label={`${site.name} — ${t.common.home}`}>
+            <Logo />
+          </LocalLink>
 
-        <nav aria-label="Main" className="hidden items-center gap-8 xl:flex">
-          {NAV_KEYS.map((key) => (
-            <LocalLink
-              key={key}
-              page={key}
-              className="link-underline pb-1 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-ink-foreground/85 transition-colors hover:text-gold [&.active]:text-gold"
+          <nav aria-label="Main" className="hidden items-center gap-8 xl:flex">
+            {NAV_KEYS.map((key) => (
+              <LocalLink
+                key={key}
+                page={key}
+                className="link-underline pb-1 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-ink-foreground/85 transition-colors hover:text-gold [&.active]:text-gold"
+              >
+                {t.nav[key]}
+              </LocalLink>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <LanguageSwitch className="hidden sm:flex" />
+            <BookButton size="sm" className="hidden md:inline-flex" />
+            <Button
+              variant="ghostLight"
+              size="icon"
+              className="xl:hidden"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label={open ? t.common.close : t.common.menu}
+              onClick={() => setOpen((v) => !v)}
             >
-              {t.nav[key]}
-            </LocalLink>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <LanguageSwitch className="hidden sm:flex" />
-          <BookButton size="sm" className="hidden md:inline-flex" />
-          <Button
-            variant="ghostLight"
-            size="icon"
-            className="xl:hidden"
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            aria-label={open ? t.common.close : t.common.menu}
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? <X className="!size-6" /> : <Menu className="!size-6" />}
-          </Button>
+              {open ? <X className="!size-6" /> : <Menu className="!size-6" />}
+            </Button>
+          </div>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — outside <header> so its backdrop-filter doesn't trap position:fixed */}
       <div
         id="mobile-menu"
         hidden={!open}
-        className="fixed inset-x-0 top-[68px] bottom-0 overflow-y-auto bg-ink xl:hidden"
+        className="fixed inset-x-0 top-[68px] bottom-0 z-[45] overflow-y-auto bg-ink text-ink-foreground xl:hidden"
       >
         <div className="container-luxe flex min-h-full flex-col py-10">
           <nav aria-label="Mobile" className="flex flex-col">
@@ -103,7 +105,11 @@ export function Header() {
                 </a>
               </Button>
               <Button asChild variant="outlineLight">
-                <a href={whatsappLink(t.common.bookingMessage)} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={whatsappLink(t.common.bookingMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <WhatsAppIcon /> {t.common.whatsapp}
                 </a>
               </Button>
@@ -111,12 +117,17 @@ export function Header() {
           </div>
           <div className="mt-auto flex items-center justify-between pt-10 text-ink-muted">
             <LanguageSwitch />
-            <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs tracking-[0.2em] hover:text-gold">
+            <a
+              href={site.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-xs tracking-[0.2em] hover:text-gold"
+            >
               <InstagramIcon className="h-5 w-5" /> {site.social.instagramHandle}
             </a>
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }

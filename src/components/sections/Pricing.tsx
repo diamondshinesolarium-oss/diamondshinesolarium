@@ -7,6 +7,10 @@ import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { BookButton } from "@/components/site/BookButton";
 
+function formatEuro(value: number, lang: string) {
+  return new Intl.NumberFormat(lang === "en" ? "en-GB" : "es-ES", { style: "currency", currency: "EUR" }).formatToParts(value);
+}
+
 export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
   const t = useT();
   return (
@@ -34,12 +38,22 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
                 <p className={cn("mt-3 min-h-12 text-sm leading-relaxed", featured ? "text-ink-muted" : "text-muted-foreground")}>{c.text}</p>
 
                 <div className={cn("my-8 border-y py-6", featured ? "border-ink-line" : "border-border")}>
-                  {p.price ? (
-                    <p className="flex items-baseline gap-2">
+                  {p.pricePerMinute !== null ? (
+                    <div>
                       <span className={cn("eyebrow", featured ? "text-gold" : "text-gold-deep")}>{t.pricing.from}</span>
-                      <span className="font-display text-5xl">{p.price}</span>
-                      <span className={cn("text-sm", featured ? "text-ink-muted" : "text-muted-foreground")}>{t.pricing.perMinute}</span>
-                    </p>
+                      <p className="mt-2 flex items-baseline gap-2 whitespace-nowrap">
+                        <span className="font-display text-5xl">
+                          {formatEuro(p.pricePerMinute, t.meta.htmlLang).map((part, idx) =>
+                            part.type === "currency" ? (
+                              <span key={idx} className="font-sans text-3xl font-light">{part.value}</span>
+                            ) : (
+                              <span key={idx}>{part.value}</span>
+                            ),
+                          )}
+                        </span>
+                        <span className={cn("text-sm", featured ? "text-ink-muted" : "text-muted-foreground")}>{t.pricing.perMinute}</span>
+                      </p>
+                    </div>
                   ) : (
                     <p className="font-display text-2xl italic">{t.pricing.onRequest}</p>
                   )}
