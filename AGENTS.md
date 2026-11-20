@@ -28,3 +28,12 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Every page exists twice, as a Spanish route under `src/routes/es.*` and an English route under `src/routes/en.*`, registered in `src/i18n/pages.ts` (`PAGE_PATHS`); why: localized URLs with hreflang need one real route per language.
+- All visible copy lives in `src/i18n/es.ts` (source of the `Dict` type) and `src/i18n/en.ts`; components read it with `useT()`; why: the type system forces both languages to stay complete.
+- Business facts (phone, hours, address, prices, links, GA/Search Console IDs, legal owner data) live only in `src/content/site.ts` and `src/content/pricing.ts`; unconfirmed values stay `null` and the UI hides or flags them instead of inventing them.
+- Page title/description/canonical/hreflang come from `pageHead()` in `src/lib/seo.ts`, called from each leaf route's `head()`; the root loader supplies the request origin; why: absolute URLs stay correct on any domain.
+- Booking and the contact form open WhatsApp with a prefilled message (no data stored); swap to `site.bookingUrl` when an online booking system exists.
+- Third-party scripts and embeds (Google Analytics, Google Maps) load only after consent via `ConsentProvider`; why: GDPR.
