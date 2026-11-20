@@ -37,3 +37,4 @@ use the editor.
 - Page title/description/canonical/hreflang come from `pageHead()` in `src/lib/seo.ts`, called from each leaf route's `head()`; the root loader supplies the request origin; why: absolute URLs stay correct on any domain.
 - Booking and the contact form open WhatsApp with a prefilled message (no data stored); swap to `site.bookingUrl` when an online booking system exists.
 - Third-party scripts and embeds (Google Analytics, Google Maps) load only after consent via `ConsentProvider`; why: GDPR.
+- Every route states its sitemap decision in `staticData.sitemap` (`src/lib/sitemap.ts` makes the field required); `/sitemap.xml` derives its URLs from the router and takes the public origin from `site.url`; why: a new page can never silently miss the sitemap, and the domain changes in one place.

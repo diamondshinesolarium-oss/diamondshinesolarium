@@ -8,6 +8,9 @@ export const site = {
   shortName: "Diamond Shine",
   foundedYear: 2013,
 
+  /** Canonical public origin — drives the sitemap and the robots.txt Sitemap line. */
+  url: "https://diamondshine.es",
+
   phone: { display: "+34 622 49 60 77", e164: "+34622496077" },
   landline: { display: "+34 951 91 40 57", e164: "+34951914057" },
   whatsapp: "34622496077",
@@ -36,8 +39,8 @@ export const site = {
   ] as { day: number; open: string | null; close: string | null }[],
 
   social: {
-    instagram: "https://www.instagram.com/rm_shine_solarium/",
-    instagramHandle: "@rm_shine_solarium",
+    instagram: "https://www.instagram.com/diamondshinemarbella/",
+    instagramHandle: "@diamondshinemarbella",
     facebook: "https://www.facebook.com/rmshinemarbella/" as string | null,
   },
 

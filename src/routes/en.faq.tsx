@@ -3,6 +3,7 @@ import { FaqPage } from "@/components/pages/InnerPages";
 import { faqJsonLd, pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/en/faq")({
+  staticData: { sitemap: true },
   head: ({ matches }) => ({
     ...pageHead("en", "faq", matches),
     scripts: [{ type: "application/ld+json", children: JSON.stringify(faqJsonLd("en")) }],

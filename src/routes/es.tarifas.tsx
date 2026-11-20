@@ -3,6 +3,7 @@ import { PricesPage } from "@/components/pages/InnerPages";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/es/tarifas")({
+  staticData: { sitemap: true },
   head: ({ matches }) => pageHead("es", "prices", matches),
   component: function Page() {
     return <PricesPage />;

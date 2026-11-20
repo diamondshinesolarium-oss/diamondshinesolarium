@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnRouteImport } from './routes/en'
 import { Route as EsRouteImport } from './routes/es'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as EnIndexRouteImport } from './routes/en.index'
 import { Route as EnContactRouteImport } from './routes/en.contact'
 import { Route as EnCookiePolicyRouteImport } from './routes/en.cookie-policy'
@@ -48,6 +49,11 @@ const EnRoute = EnRouteImport.update({
 const EsRoute = EsRouteImport.update({
   id: '/es',
   path: '/es',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EnIndexRoute = EnIndexRouteImport.update({
@@ -165,6 +171,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/en': typeof EnRouteWithChildren
   '/es': typeof EsRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/en/contact': typeof EnContactRoute
   '/en/cookie-policy': typeof EnCookiePolicyRoute
   '/en/faq': typeof EnFaqRoute
@@ -190,6 +197,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/en/contact': typeof EnContactRoute
   '/en/cookie-policy': typeof EnCookiePolicyRoute
   '/en/faq': typeof EnFaqRoute
@@ -218,6 +226,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/en': typeof EnRouteWithChildren
   '/es': typeof EsRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/en/contact': typeof EnContactRoute
   '/en/cookie-policy': typeof EnCookiePolicyRoute
   '/en/faq': typeof EnFaqRoute
@@ -247,6 +256,7 @@ export interface FileRouteTypes {
     | '/'
     | '/en'
     | '/es'
+    | '/sitemap.xml'
     | '/en/contact'
     | '/en/cookie-policy'
     | '/en/faq'
@@ -272,6 +282,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/sitemap.xml'
     | '/en/contact'
     | '/en/cookie-policy'
     | '/en/faq'
@@ -299,6 +310,7 @@ export interface FileRouteTypes {
     | '/'
     | '/en'
     | '/es'
+    | '/sitemap.xml'
     | '/en/contact'
     | '/en/cookie-policy'
     | '/en/faq'
@@ -327,6 +339,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EnRoute: typeof EnRouteWithChildren
   EsRoute: typeof EsRouteWithChildren
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -350,6 +363,13 @@ declare module '@tanstack/react-router' {
       path: '/es'
       fullPath: '/es'
       preLoaderRoute: typeof EsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/en/': {
@@ -573,6 +593,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EnRoute: EnRouteWithChildren,
   EsRoute: EsRouteWithChildren,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

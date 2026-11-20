@@ -4,6 +4,7 @@ import { pageHead } from "@/lib/seo";
 import ogImage from "@/assets/og-diamond-shine.jpg";
 
 export const Route = createFileRoute("/en/")({
+  staticData: { sitemap: true },
   head: ({ matches }) => pageHead("en", "home", matches, ogImage),
   component: function Page() {
     return <HomePage />;

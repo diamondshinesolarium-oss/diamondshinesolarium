@@ -81,6 +81,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  staticData: { sitemap: false },
   // Request origin for absolute canonical / hreflang / Open Graph URLs. Fetched once per visit.
   loader: async () => ({ origin: await getRequestOrigin() }),
   staleTime: Infinity,

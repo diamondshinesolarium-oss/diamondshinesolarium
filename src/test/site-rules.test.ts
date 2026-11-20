@@ -23,6 +23,11 @@ describe("business data", () => {
     expect(site.whatsapp).toBe("34622496077");
   });
 
+  it("advertises the Instagram account the owner confirmed", () => {
+    expect(site.social.instagramHandle).toBe("@diamondshinemarbella");
+    expect(site.social.instagram).toBe("https://www.instagram.com/diamondshinemarbella/");
+  });
+
   it("only shows the confirmed price (from €0.60/min); other options are on request", () => {
     expect(pricing.find((p) => p.key === "sessions")?.pricePerMinute).toBe(0.6);
     for (const key of ["packages", "memberships", "offers"] as const) {
