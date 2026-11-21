@@ -26,23 +26,26 @@ export function Technology() {
             <img
               src={salonPhotos.tanningBed.url}
               alt={t.technology.imageAlt}
-              width={1920}
-              height={900}
+              width={1040}
+              height={709}
               loading="lazy"
               className="aspect-[16/9] h-full w-full object-cover transition-transform duration-[2s] ease-[var(--ease-luxe)] hover:scale-105"
             />
           </Reveal>
           <Reveal className="flex flex-col justify-between border border-ink-line p-8 md:col-span-4" delay={150}>
             <p className="eyebrow text-gold">{t.technology.brandsLabel}</p>
-            <ul className="mt-8 space-y-4">
-              {site.equipmentBrands.map((b) => (
-                <li key={b} className="font-display text-4xl tracking-[0.06em] uppercase md:text-5xl">
-                  {b}
+            <p className="mt-8 font-display text-4xl tracking-[0.06em] uppercase md:text-5xl">{site.equipmentBrand}</p>
+            <p className="eyebrow mt-8 text-ink-muted">{t.technology.modelsLabel}</p>
+            <ul className="mt-3 divide-y divide-ink-line border-y border-ink-line">
+              {site.equipmentModels.map((m) => (
+                <li key={m} className="flex items-baseline justify-between py-3">
+                  <span className="text-sm text-ink-muted">{site.equipmentBrand}</span>
+                  <span className="font-display text-2xl tracking-[0.04em]">{m}</span>
                 </li>
               ))}
             </ul>
             <div className="mt-10 overflow-hidden rounded-sm">
-              <img src={salonPhotos.cabin.url} alt={t.technology.image2Alt} width={1920} height={900} loading="lazy" className="aspect-[16/9] w-full object-cover" />
+              <img src={salonPhotos.cabin.url} alt={t.technology.image2Alt} width={1150} height={705} loading="lazy" className="aspect-[16/9] w-full object-cover" />
             </div>
           </Reveal>
         </div>

@@ -9,7 +9,7 @@ export function Intro() {
   const stats = [
     { value: String(site.foundedYear), label: t.intro.stats.since },
     { value: site.google.rating.toLocaleString(t.meta.htmlLang), label: t.intro.stats.rating, star: true },
-    { value: "Soltron · Ergoline", label: t.intro.stats.brands, small: true },
+    { value: site.equipmentBrand, label: t.intro.stats.brands, small: true },
     { value: "10h · 21h", label: t.intro.stats.hours },
   ];
   return (

@@ -42,7 +42,7 @@ export const en: Dict = {
     home: {
       title: "Tanning Salon in Puerto Banús, Marbella | Diamond Shine Solarium",
       description:
-        "Indoor tanning studio in Puerto Banús, Marbella. Soltron and Ergoline tanning beds, personal advice and an exclusive setting. Book your session.",
+        "Indoor tanning studio in Puerto Banús, Marbella. Megasun tanning beds, personal advice and an exclusive setting. Book your session.",
     },
     studio: {
       title: "Our Studio | Tanning Salon Puerto Banús — Diamond Shine",
@@ -50,9 +50,9 @@ export const en: Dict = {
         "Discover Diamond Shine Solarium: a professional indoor tanning studio in Marina Banús, Marbella, offering personal service since 2013.",
     },
     technology: {
-      title: "Soltron & Ergoline Tanning Beds in Marbella | Diamond Shine",
+      title: "Megasun Tanning Beds in Marbella | Diamond Shine",
       description:
-        "Professional Soltron and Ergoline tanning beds in Puerto Banús, with air conditioning, music, aquaflash and aroma.",
+        "Professional Megasun P9S, K7S and K11 tanning beds in Puerto Banús, with air conditioning, music, aquaflash and aroma.",
     },
     prices: {
       title: "Indoor Tanning Prices in Marbella | Diamond Shine Solarium",
@@ -116,7 +116,7 @@ export const en: Dict = {
     intro: "Every visit is designed to feel comfortable, discreet and unhurried — from the welcome to your last minute in the tanning room.",
     items: [
       { title: "A refined setting", text: "A modern, bright space designed for you to relax before and after each session." },
-      { title: "Professional equipment", text: "Tanning beds from leading brands such as Soltron and Ergoline, carefully maintained." },
+      { title: "Professional equipment", text: "Megasun P9S, K7S and K11 tanning beds, carefully maintained." },
       { title: "Personal advice", text: "Guidance based on your skin type, your goals and how often you tan." },
       { title: "Options for you", text: "Pay-by-the-minute sessions on three tanning beds and packages with extra credit to suit your routine." },
       { title: "In Puerto Banús", text: "In Marina Banús, close to Marbella's best-known shops and restaurants." },
@@ -125,9 +125,10 @@ export const en: Dict = {
   },
   technology: {
     eyebrow: "02 — Our technology",
-    heading: "Professional tanning beds from internationally renowned brands.",
-    body: "We work with manufacturers known worldwide for their reliability and quality, such as Soltron and Ergoline. Our range of tanning beds suits different skin types, and our team will recommend the right one for you.",
+    heading: "Professional Megasun tanning beds, an international reference.",
+    body: "We work with Megasun, a manufacturer known worldwide for its reliability and quality, with three models: P9S, K7S and K11. Our range of tanning beds suits different skin types, and our team will recommend the right one for you.",
     brandsLabel: "Brands we work with",
+    modelsLabel: "Our models",
     featuresLabel: "In-cabin comfort",
     features: {
       air: { title: "Air conditioning", text: "Ventilation and cooling for a more pleasant session." },
@@ -136,8 +137,8 @@ export const en: Dict = {
       aroma: { title: "Aroma", text: "Subtle scents to complete the experience." },
     },
     note: "Features vary by tanning bed. Ask at reception.",
-    imageAlt: "Lie-down tanning bed with blue lighting at Diamond Shine",
-    image2Alt: "Tanning bed in a private room at Diamond Shine, Puerto Banús",
+    imageAlt: "Megasun tanning bed with pink lighting at Diamond Shine",
+    image2Alt: "Megasun tanning bed with touchscreen at Diamond Shine, Puerto Banús",
   },
   pricing: {
     eyebrow: "03 — Tanning options & prices",
@@ -171,7 +172,7 @@ export const en: Dict = {
     items: [
       { title: "Experience in Marbella", text: "More than a decade dedicated to indoor tanning in Puerto Banús." },
       { title: "Personal service", text: "Recommendations tailored to your skin, unhurried and discreet." },
-      { title: "Professional equipment", text: "Tanning beds from renowned manufacturers, checked and maintained." },
+      { title: "Professional equipment", text: "Latest-generation Megasun tanning beds, checked and maintained." },
       { title: "Prime location", text: "In Marina Banús — easy to find and close to everything." },
       { title: "A sophisticated setting", text: "A comfortable, spotless space designed around your wellbeing." },
       { title: "Responsible guidance", text: "We explain precautions and recommendations before every session." },
@@ -182,13 +183,11 @@ export const en: Dict = {
     heading: "Our studio.",
     intro: "Real photos of Diamond Shine in Marina Banús.",
     alts: {
-      lounge: "Lounge with Chesterfield sofas and stairs to the mezzanine at Diamond Shine",
-      reception: "White reception desk with stools and tanning skincare display",
-      tanningBed: "Inside a lie-down tanning bed with blue light",
-      cabin: "Illuminated tanning bed in a private room",
-      mezzanine: "Reception and mezzanine with a tanning bed in view",
-      corridor: "Corridor with doors to the private tanning rooms",
-      products: "Display of indoor tanning lotions and accelerators",
+      reception: "Reception with lit staircase, pop-art paintings and the Diamond Shine logo",
+      lounge: "Waiting area with fuchsia sofas, reception desk and tanning skincare display",
+      tanningBed: "Open Megasun tanning bed with pink lighting",
+      cabin: "Megasun tanning bed with touchscreen and red light",
+      corridor: "Corridor with turquoise lighting leading to the private tanning rooms",
     },
   },
   reviews: {
@@ -253,7 +252,7 @@ export const en: Dict = {
       },
       {
         q: "What tanning options do you offer?",
-        a: "You can pay by the minute depending on the tanning bed: Excellence €1.20, Prestige €1.50 and Premium €1.95 per minute. We also offer packages with extra credit: Package S (pay €49, get €60, valid 2 months), Package M (pay €79, get €100, valid 4 months) and Package L (pay €149, get €200, valid 6 months). Our professional tanning beds are from brands such as Soltron and Ergoline.",
+        a: "You can pay by the minute depending on the tanning bed: Excellence €1.20, Prestige €1.50 and Premium €1.95 per minute. We also offer packages with extra credit: Package S (pay €49, get €60, valid 2 months), Package M (pay €79, get €100, valid 4 months) and Package L (pay €149, get €200, valid 6 months). Our professional tanning beds are Megasun: models P9S, K7S and K11.",
       },
       {
         q: "How long does a session last?",
@@ -303,7 +302,7 @@ export const en: Dict = {
   },
   pages: {
     studio: { eyebrow: "Our studio", title: "Diamond Shine, Puerto Banús", text: "A space dedicated to indoor tanning, with personal service since 2013." },
-    technology: { eyebrow: "Technology", title: "Our tanning beds", text: "Professional Soltron and Ergoline equipment for a tan suited to every skin." },
+    technology: { eyebrow: "Technology", title: "Our tanning beds", text: "Professional Megasun P9S, K7S and K11 tanning beds for a tan suited to every skin." },
     prices: { eyebrow: "Prices", title: "Tanning options", text: "Sessions by the minute from €1.20 and packages with extra credit." },
     gallery: { eyebrow: "Gallery", title: "Inside Diamond Shine", text: "Reception, lounge and tanning rooms at our Marina Banús studio." },
     faq: { eyebrow: "FAQ", title: "Frequently asked questions", text: "Clear answers before your first session." },

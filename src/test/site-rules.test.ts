@@ -23,6 +23,17 @@ describe("business data", () => {
     expect(site.whatsapp).toBe("34622496077");
   });
 
+  it("publishes the email the owner confirmed", () => {
+    expect(site.email).toBe("diamondshinesolariumbanus@gmail.com");
+  });
+
+  it("lists the Megasun tanning beds P9S, K7S and K11 and no old brands", () => {
+    expect(site.equipmentBrand).toBe("Megasun");
+    expect(site.equipmentModels).toEqual(["P9S", "K7S", "K11"]);
+    const text = JSON.stringify({ es, en });
+    for (const old of ["Soltron", "Ergoline"]) expect(text, old).not.toContain(old);
+  });
+
   it("advertises the Instagram account the owner confirmed", () => {
     expect(site.social.instagramHandle).toBe("@diamondshinemarbella");
     expect(site.social.instagram).toBe("https://www.instagram.com/diamondshinemarbella/");

@@ -14,7 +14,7 @@ export const site = {
   phone: { display: "+34 622 49 60 77", e164: "+34622496077" },
   landline: { display: "+34 951 91 40 57", e164: "+34951914057" },
   whatsapp: "34622496077",
-  email: "info@rmshinesolarium.es" as string | null,
+  email: "diamondshinesolariumbanus@gmail.com" as string | null,
 
   address: {
     street: "C. Francisco Villalón, 10 — Marina Banús, bloque 3-4, local 10",
@@ -66,7 +66,9 @@ export const site = {
   /** Google Search Console HTML-tag verification code. */
   searchConsoleVerification: null as string | null,
 
-  equipmentBrands: ["Soltron", "Ergoline"],
+  equipmentBrand: "Megasun",
+  /** Tanning bed models currently in the studio (confirmed by the owner, Nov 2026). */
+  equipmentModels: ["P9S", "K7S", "K11"],
   cabinFeatures: ["air", "music", "aquaflash", "aroma"] as const,
   productBrands: ["Australian Gold", "Tannymaxx", "Peau d'Or"],
 

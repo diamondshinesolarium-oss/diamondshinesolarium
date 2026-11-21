@@ -22,8 +22,8 @@ export function Experience() {
             <img
               src={salonPhotos.lounge.url}
               alt={t.gallery.alts.lounge}
-              width={1920}
-              height={900}
+              width={1600}
+              height={683}
               loading="lazy"
               className="absolute -right-4 -bottom-10 hidden w-1/2 rounded-sm border-4 border-background object-cover shadow-luxe md:block lg:-right-10"
             />

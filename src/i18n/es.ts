@@ -41,7 +41,7 @@ export const es = {
     home: {
       title: "Solarium en Puerto Banús, Marbella | Diamond Shine Solarium",
       description:
-        "Centro de bronceado en cabina en Puerto Banús, Marbella. Equipos Soltron y Ergoline, asesoramiento personalizado y un ambiente exclusivo. Reserva tu sesión.",
+        "Centro de bronceado en cabina en Puerto Banús, Marbella. Cabinas Megasun, asesoramiento personalizado y un ambiente exclusivo. Reserva tu sesión.",
     },
     studio: {
       title: "El centro | Solarium en Puerto Banús — Diamond Shine",
@@ -49,9 +49,9 @@ export const es = {
         "Descubre Diamond Shine Solarium: un centro de bronceado profesional en Marina Banús, Marbella, con atención personalizada desde 2013.",
     },
     technology: {
-      title: "Cabinas de bronceado Soltron y Ergoline | Diamond Shine Marbella",
+      title: "Cabinas de bronceado Megasun en Marbella | Diamond Shine",
       description:
-        "Cabinas de bronceado profesionales de Soltron y Ergoline en Puerto Banús, con climatización, música, aquaflash y aroma.",
+        "Cabinas de bronceado profesionales Megasun P9S, K7S y K11 en Puerto Banús, con climatización, música, aquaflash y aroma.",
     },
     prices: {
       title: "Tarifas de bronceado en cabina en Marbella | Diamond Shine",
@@ -118,7 +118,7 @@ export const es = {
       "Diseñamos cada visita para que sea cómoda, discreta y sin prisas: desde la bienvenida hasta el último minuto en cabina.",
     items: [
       { title: "Ambiente cuidado", text: "Un espacio moderno y luminoso, pensado para relajarse antes y después de cada sesión." },
-      { title: "Equipos profesionales", text: "Cabinas de marcas de referencia como Soltron y Ergoline, mantenidas con rigor." },
+      { title: "Equipos profesionales", text: "Cabinas Megasun P9S, K7S y K11, mantenidas con rigor." },
       { title: "Atención personalizada", text: "Te asesoramos según tu fototipo, tus objetivos y la frecuencia de tus sesiones." },
       { title: "Opciones a tu medida", text: "Sesiones por minuto en tres cabinas y bonos con crédito extra para adaptarnos a tu ritmo." },
       { title: "En pleno Puerto Banús", text: "En Marina Banús, junto a las tiendas y restaurantes más conocidos de Marbella." },
@@ -127,9 +127,10 @@ export const es = {
   },
   technology: {
     eyebrow: "02 — Tecnología",
-    heading: "Cabinas profesionales de marcas reconocidas internacionalmente.",
-    body: "Trabajamos con fabricantes conocidos en todo el mundo por su fiabilidad y calidad, como Soltron y Ergoline. Contamos con distintas cabinas para adaptarnos a cada tipo de piel; nuestro equipo te indicará cuál es la más adecuada para ti.",
+    heading: "Cabinas profesionales Megasun, de referencia internacional.",
+    body: "Trabajamos con Megasun, un fabricante conocido en todo el mundo por su fiabilidad y calidad, con tres modelos: P9S, K7S y K11. Contamos con distintas cabinas para adaptarnos a cada tipo de piel; nuestro equipo te indicará cuál es la más adecuada para ti.",
     brandsLabel: "Marcas con las que trabajamos",
+    modelsLabel: "Nuestros modelos",
     featuresLabel: "Confort en cabina",
     features: {
       air: { title: "Climatización", text: "Ventilación y aire acondicionado para una sesión más agradable." },
@@ -138,8 +139,8 @@ export const es = {
       aroma: { title: "Aroma", text: "Notas aromáticas sutiles para completar la experiencia." },
     },
     note: "La disponibilidad de cada función depende de la cabina. Consúltanos en recepción.",
-    imageAlt: "Cabina de bronceado horizontal con iluminación azul en Diamond Shine",
-    image2Alt: "Cabina de bronceado del centro Diamond Shine en Puerto Banús",
+    imageAlt: "Cabina de bronceado Megasun con iluminación rosa en Diamond Shine",
+    image2Alt: "Cabina Megasun con pantalla táctil en Diamond Shine, Puerto Banús",
   },
   pricing: {
     eyebrow: "03 — Opciones y tarifas",
@@ -174,7 +175,7 @@ export const es = {
     items: [
       { title: "Experiencia en Marbella", text: "Más de una década dedicada al bronceado en cabina en Puerto Banús." },
       { title: "Trato personalizado", text: "Recomendaciones según tu piel, sin prisas y con total discreción." },
-      { title: "Equipos profesionales", text: "Cabinas de fabricantes reconocidos, revisadas y mantenidas." },
+      { title: "Equipos profesionales", text: "Cabinas Megasun de última generación, revisadas y mantenidas." },
       { title: "Ubicación privilegiada", text: "En Marina Banús, fácil de encontrar y cerca de todo." },
       { title: "Ambiente sofisticado", text: "Un espacio confortable, limpio y diseñado para tu bienestar." },
       { title: "Información responsable", text: "Te explicamos las precauciones y recomendaciones antes de cada sesión." },
@@ -185,13 +186,11 @@ export const es = {
     heading: "Nuestro centro.",
     intro: "Fotografías reales de Diamond Shine en Marina Banús.",
     alts: {
-      lounge: "Zona de espera con sofás Chester y escalera al altillo en Diamond Shine",
-      reception: "Recepción blanca con taburetes y expositor de cosmética solar",
-      tanningBed: "Interior de una cabina de bronceado horizontal con luz azul",
-      cabin: "Cabina de bronceado iluminada en una sala privada",
-      mezzanine: "Recepción y altillo con cabina de bronceado visible",
-      corridor: "Pasillo con puertas a las salas de bronceado privadas",
-      products: "Expositor de cremas y aceleradores para bronceado en cabina",
+      reception: "Recepción con escalera iluminada, obras de arte pop y logotipo de Diamond Shine",
+      lounge: "Zona de espera con sofás fucsia, recepción y expositor de cosmética solar",
+      tanningBed: "Cabina de bronceado Megasun abierta con iluminación rosa",
+      cabin: "Cabina de bronceado Megasun con pantalla táctil y luz roja",
+      corridor: "Pasillo con iluminación turquesa hacia las salas de bronceado privadas",
     },
   },
   reviews: {
@@ -257,7 +256,7 @@ export const es = {
       },
       {
         q: "¿Qué opciones de bronceado ofrecen?",
-        a: "Puedes pagar por minutos según la cabina: Excellence 1,20 €, Prestige 1,50 € y Premium 1,95 € por minuto. También tenemos bonos con crédito extra: Bono S (pagas 49 €, recibes 60 €, válido 2 meses), Bono M (pagas 79 €, recibes 100 €, válido 4 meses) y Bono L (pagas 149 €, recibes 200 €, válido 6 meses). Nuestras cabinas profesionales son de marcas como Soltron y Ergoline.",
+        a: "Puedes pagar por minutos según la cabina: Excellence 1,20 €, Prestige 1,50 € y Premium 1,95 € por minuto. También tenemos bonos con crédito extra: Bono S (pagas 49 €, recibes 60 €, válido 2 meses), Bono M (pagas 79 €, recibes 100 €, válido 4 meses) y Bono L (pagas 149 €, recibes 200 €, válido 6 meses). Nuestras cabinas profesionales son Megasun: modelos P9S, K7S y K11.",
       },
       {
         q: "¿Cuánto dura una sesión?",
@@ -309,7 +308,7 @@ export const es = {
   },
   pages: {
     studio: { eyebrow: "El centro", title: "Diamond Shine, Puerto Banús", text: "Un espacio dedicado al bronceado en cabina, con atención personalizada desde 2013." },
-    technology: { eyebrow: "Tecnología", title: "Nuestras cabinas", text: "Equipos profesionales de Soltron y Ergoline para un bronceado adaptado a cada piel." },
+    technology: { eyebrow: "Tecnología", title: "Nuestras cabinas", text: "Cabinas profesionales Megasun P9S, K7S y K11 para un bronceado adaptado a cada piel." },
     prices: { eyebrow: "Tarifas", title: "Opciones de bronceado", text: "Sesiones por minuto desde 1,20 € y bonos con crédito extra." },
     gallery: { eyebrow: "Galería", title: "Dentro de Diamond Shine", text: "Recepción, zona de espera y cabinas de nuestro centro en Marina Banús." },
     faq: { eyebrow: "FAQ", title: "Preguntas frecuentes", text: "Respuestas claras antes de tu primera sesión." },

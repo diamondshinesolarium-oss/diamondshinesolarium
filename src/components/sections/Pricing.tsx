@@ -142,8 +142,8 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
             <img
               src={salonPhotos.products.url}
               alt={p.productsAlt}
-              width={706}
-              height={266}
+              width={700}
+              height={320}
               loading="lazy"
               className="w-full rounded-sm object-cover shadow-luxe"
             />
