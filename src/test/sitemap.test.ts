@@ -1,6 +1,7 @@
 import { QueryClient } from "@tanstack/react-query";
 import { createRouter } from "@tanstack/react-router";
 import { readFileSync } from "node:fs";
+import path from "node:path";
 import { describe, expect, it } from "vitest";
 
 import { routeTree } from "@/routeTree.gen";
@@ -19,7 +20,7 @@ describe("sitemap", () => {
 
   it("is published for the domain the owner confirmed", () => {
     expect(site.url).toBe("https://diamondshine.es");
-    const robots = readFileSync(new URL("../../public/robots.txt", import.meta.url), "utf8");
+    const robots = readFileSync(path.resolve(process.cwd(), "public/robots.txt"), "utf8");
     expect(robots).toContain(`Sitemap: ${site.url}/sitemap.xml`);
   });
 
