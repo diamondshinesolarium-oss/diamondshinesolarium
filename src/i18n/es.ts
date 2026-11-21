@@ -56,7 +56,7 @@ export const es = {
     prices: {
       title: "Tarifas de bronceado en cabina en Marbella | Diamond Shine",
       description:
-        "Sesiones de bronceado desde 0,60 € por minuto en Puerto Banús. Sesiones sueltas, bonos y suscripciones. Consulta las tarifas vigentes.",
+        "Bronceado en cabina desde 1,20 € por minuto en Puerto Banús. Cabinas Excellence, Prestige y Premium y bonos con crédito extra desde 49 €.",
     },
     gallery: {
       title: "Galería | Diamond Shine Solarium, Puerto Banús",
@@ -120,7 +120,7 @@ export const es = {
       { title: "Ambiente cuidado", text: "Un espacio moderno y luminoso, pensado para relajarse antes y después de cada sesión." },
       { title: "Equipos profesionales", text: "Cabinas de marcas de referencia como Soltron y Ergoline, mantenidas con rigor." },
       { title: "Atención personalizada", text: "Te asesoramos según tu fototipo, tus objetivos y la frecuencia de tus sesiones." },
-      { title: "Opciones a tu medida", text: "Sesiones sueltas, bonos y suscripciones para adaptarnos a tu ritmo." },
+      { title: "Opciones a tu medida", text: "Sesiones por minuto en tres cabinas y bonos con crédito extra para adaptarnos a tu ritmo." },
       { title: "En pleno Puerto Banús", text: "En Marina Banús, junto a las tiendas y restaurantes más conocidos de Marbella." },
     ],
     imageAlt: "Mano con anillos dorados sobre piel bronceada y tejido de satén champán",
@@ -144,37 +144,25 @@ export const es = {
   pricing: {
     eyebrow: "03 — Opciones y tarifas",
     heading: "Tu bronceado, a tu ritmo.",
-    intro: "Puedes broncearte con o sin suscripción. Te ayudamos a elegir la opción que mejor encaja contigo.",
+    intro: "Elige tu cabina y paga solo los minutos que uses, o consigue crédito extra con un bono.",
     from: "Desde",
     perMinute: "/ minuto",
-    onRequest: "Precio a consultar",
-    featured: "Más elegido",
-    categories: {
-      sessions: {
-        title: "Sesiones individuales",
-        text: "Paga solo los minutos que necesitas, sin compromiso ni suscripción.",
-        benefits: ["Sin suscripción", "Ideal para visitantes", "Asesoramiento incluido"],
-      },
-      packages: {
-        title: "Bonos de bronceado",
-        text: "Paquetes de minutos para quienes se broncean con regularidad.",
-        benefits: ["Para clientes habituales", "Uso flexible", "Pregúntanos por los bonos vigentes"],
-      },
-      memberships: {
-        title: "Suscripciones",
-        text: "Una fórmula pensada para mantener tu bronceado durante todo el año.",
-        benefits: ["Para un mantenimiento continuo", "Condiciones personalizadas", "Infórmate en el centro"],
-      },
-      offers: {
-        title: "Ofertas exclusivas",
-        text: "Promociones puntuales y de temporada para nuestros clientes.",
-        benefits: ["Promociones de temporada", "Novedades en Instagram", "Consulta disponibilidad"],
-      },
-    },
+    sessionsTitle: "Sesiones por minuto",
+    sessionsText: "Sin compromiso. Te ayudamos a elegir la cabina que mejor encaja contigo.",
+    cabin: "Cabina",
+    packagesTitle: "Bonos de bronceado",
+    packagesText: "Paga una vez y recibe crédito extra para tus sesiones.",
+    packageName: "Bono {size}",
+    youPay: "Pagas",
+    youGet: "Recibes",
+    credit: "de crédito",
+    bonus: "+{amount} de regalo",
+    validFor: "Válido {months} meses",
+    bestValue: "Mayor ahorro",
     ctaSessions: "Reservar sesión",
-    ctaInfo: "Pedir información",
-    disclaimer:
-      "Las tarifas pueden variar; confirma la tarifa vigente en el centro o por WhatsApp.",
+    ctaPackage: "Quiero este bono",
+    packageMessage: "Hola Diamond Shine, me interesa el Bono {size}. ¿Me podéis dar más información?",
+    disclaimer: "Las tarifas pueden variar; confirma la tarifa vigente en el centro o por WhatsApp.",
     productsTitle: "Cosmética solar profesional",
     productsText:
       "En el centro encontrarás productos especializados para el bronceado en cabina de marcas como Australian Gold, Tannymaxx o Peau d'Or.",
@@ -269,7 +257,7 @@ export const es = {
       },
       {
         q: "¿Qué opciones de bronceado ofrecen?",
-        a: "Ofrecemos sesiones individuales por minutos (desde 0,60 € / minuto), bonos y suscripciones, además de promociones puntuales. Disponemos de distintas cabinas profesionales de marcas como Soltron y Ergoline.",
+        a: "Puedes pagar por minutos según la cabina: Excellence 1,20 €, Prestige 1,50 € y Premium 1,95 € por minuto. También tenemos bonos con crédito extra: Bono S (pagas 49 €, recibes 60 €, válido 2 meses), Bono M (pagas 79 €, recibes 100 €, válido 4 meses) y Bono L (pagas 149 €, recibes 200 €, válido 6 meses). Nuestras cabinas profesionales son de marcas como Soltron y Ergoline.",
       },
       {
         q: "¿Cuánto dura una sesión?",
@@ -322,7 +310,7 @@ export const es = {
   pages: {
     studio: { eyebrow: "El centro", title: "Diamond Shine, Puerto Banús", text: "Un espacio dedicado al bronceado en cabina, con atención personalizada desde 2013." },
     technology: { eyebrow: "Tecnología", title: "Nuestras cabinas", text: "Equipos profesionales de Soltron y Ergoline para un bronceado adaptado a cada piel." },
-    prices: { eyebrow: "Tarifas", title: "Opciones de bronceado", text: "Sesiones por minutos, bonos y suscripciones." },
+    prices: { eyebrow: "Tarifas", title: "Opciones de bronceado", text: "Sesiones por minuto desde 1,20 € y bonos con crédito extra." },
     gallery: { eyebrow: "Galería", title: "Dentro de Diamond Shine", text: "Recepción, zona de espera y cabinas de nuestro centro en Marina Banús." },
     faq: { eyebrow: "FAQ", title: "Preguntas frecuentes", text: "Respuestas claras antes de tu primera sesión." },
     contact: { eyebrow: "Contacto", title: "Visítanos en Puerto Banús", text: "Estamos en Marina Banús. Escríbenos, llámanos o ven a vernos." },

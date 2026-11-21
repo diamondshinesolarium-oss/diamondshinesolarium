@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 
 import { routeTree } from "@/routeTree.gen";
 import { site } from "@/content/site";
-import { pricing } from "@/content/pricing";
+import { bestValuePackage, cabinRates, fromPerMinute, packageBonus, tanningPackages } from "@/content/pricing";
 import { es } from "@/i18n/es";
 import { en } from "@/i18n/en";
 import { LANGS, PAGE_PATHS, findPage, type PageKey } from "@/i18n/pages";
@@ -28,11 +28,28 @@ describe("business data", () => {
     expect(site.social.instagram).toBe("https://www.instagram.com/diamondshinemarbella/");
   });
 
-  it("only shows the confirmed price (from €0.60/min); other options are on request", () => {
-    expect(pricing.find((p) => p.key === "sessions")?.pricePerMinute).toBe(0.6);
-    for (const key of ["packages", "memberships", "offers"] as const) {
-      expect(pricing.find((p) => p.key === key)?.pricePerMinute).toBeNull();
-    }
+  it("charges per minute: Excellence €1.20, Prestige €1.50, Premium €1.95", () => {
+    expect(cabinRates.map((c) => [c.name, c.pricePerMinute])).toEqual([
+      ["Excellence", 1.2],
+      ["Prestige", 1.5],
+      ["Premium", 1.95],
+    ]);
+    expect(fromPerMinute).toBe(1.2);
+  });
+
+  it("sells packages S (49→60 €, 2 months), M (79→100 €, 4 months), L (149→200 €, 6 months)", () => {
+    expect(tanningPackages).toEqual([
+      { size: "S", pay: 49, credit: 60, validMonths: 2 },
+      { size: "M", pay: 79, credit: 100, validMonths: 4 },
+      { size: "L", pay: 149, credit: 200, validMonths: 6 },
+    ]);
+    expect(tanningPackages.map(packageBonus)).toEqual([11, 21, 51]);
+    expect(bestValuePackage).toBe("L");
+  });
+
+  it("no longer advertises the old €0.60/min price or memberships", () => {
+    const text = JSON.stringify({ es, en }).toLowerCase();
+    for (const gone of ["0,60", "0.60", "suscripciones", "memberships"]) expect(text, gone).not.toContain(gone);
   });
 });
 

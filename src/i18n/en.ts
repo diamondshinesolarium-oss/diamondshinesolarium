@@ -57,7 +57,7 @@ export const en: Dict = {
     prices: {
       title: "Indoor Tanning Prices in Marbella | Diamond Shine Solarium",
       description:
-        "Tanning sessions from €0.60 per minute in Puerto Banús. Single sessions, packages and memberships. Ask for current prices.",
+        "Indoor tanning from €1.20 per minute in Puerto Banús. Excellence, Prestige and Premium tanning beds, plus packages with extra credit from €49.",
     },
     gallery: {
       title: "Gallery | Diamond Shine Solarium, Puerto Banús",
@@ -118,7 +118,7 @@ export const en: Dict = {
       { title: "A refined setting", text: "A modern, bright space designed for you to relax before and after each session." },
       { title: "Professional equipment", text: "Tanning beds from leading brands such as Soltron and Ergoline, carefully maintained." },
       { title: "Personal advice", text: "Guidance based on your skin type, your goals and how often you tan." },
-      { title: "Options for you", text: "Single sessions, packages and memberships to suit your routine." },
+      { title: "Options for you", text: "Pay-by-the-minute sessions on three tanning beds and packages with extra credit to suit your routine." },
       { title: "In Puerto Banús", text: "In Marina Banús, close to Marbella's best-known shops and restaurants." },
     ],
     imageAlt: "Hand with gold rings resting on bronzed skin and champagne satin",
@@ -142,35 +142,24 @@ export const en: Dict = {
   pricing: {
     eyebrow: "03 — Tanning options & prices",
     heading: "Your tan, at your pace.",
-    intro: "Tan with or without a membership. We'll help you choose the option that suits you best.",
+    intro: "Choose your tanning bed and pay only for the minutes you use, or get extra credit with a package.",
     from: "From",
     perMinute: "/ minute",
-    onRequest: "Price on request",
-    featured: "Most popular",
-    categories: {
-      sessions: {
-        title: "Individual sessions",
-        text: "Pay only for the minutes you need — no commitment, no membership.",
-        benefits: ["No membership needed", "Ideal for visitors", "Personal advice included"],
-      },
-      packages: {
-        title: "Tanning packages",
-        text: "Bundles of minutes for regular tanners.",
-        benefits: ["For regular clients", "Flexible use", "Ask about current packages"],
-      },
-      memberships: {
-        title: "Memberships",
-        text: "Designed to help you maintain your tan all year round.",
-        benefits: ["For ongoing maintenance", "Tailored conditions", "Ask us in the studio"],
-      },
-      offers: {
-        title: "Exclusive offers",
-        text: "Seasonal and limited-time promotions for our clients.",
-        benefits: ["Seasonal promotions", "News on Instagram", "Ask about availability"],
-      },
-    },
+    sessionsTitle: "Pay by the minute",
+    sessionsText: "No commitment. We'll help you choose the tanning bed that suits you best.",
+    cabin: "Tanning bed",
+    packagesTitle: "Tanning packages",
+    packagesText: "Pay once and get extra credit for your sessions.",
+    packageName: "Package {size}",
+    youPay: "You pay",
+    youGet: "You get",
+    credit: "in credit",
+    bonus: "+{amount} free",
+    validFor: "Valid for {months} months",
+    bestValue: "Best value",
     ctaSessions: "Book a session",
-    ctaInfo: "Ask for details",
+    ctaPackage: "I want this package",
+    packageMessage: "Hello Diamond Shine, I'm interested in Package {size}. Could you tell me more?",
     disclaimer: "Prices may change; please confirm current prices in the studio or on WhatsApp.",
     productsTitle: "Professional tanning skincare",
     productsText: "In the studio you'll find specialist indoor tanning products from brands such as Australian Gold, Tannymaxx and Peau d'Or.",
@@ -264,7 +253,7 @@ export const en: Dict = {
       },
       {
         q: "What tanning options do you offer?",
-        a: "We offer individual sessions by the minute (from €0.60 / minute), packages and memberships, plus occasional promotions. We have a range of professional tanning beds from brands such as Soltron and Ergoline.",
+        a: "You can pay by the minute depending on the tanning bed: Excellence €1.20, Prestige €1.50 and Premium €1.95 per minute. We also offer packages with extra credit: Package S (pay €49, get €60, valid 2 months), Package M (pay €79, get €100, valid 4 months) and Package L (pay €149, get €200, valid 6 months). Our professional tanning beds are from brands such as Soltron and Ergoline.",
       },
       {
         q: "How long does a session last?",
@@ -315,7 +304,7 @@ export const en: Dict = {
   pages: {
     studio: { eyebrow: "Our studio", title: "Diamond Shine, Puerto Banús", text: "A space dedicated to indoor tanning, with personal service since 2013." },
     technology: { eyebrow: "Technology", title: "Our tanning beds", text: "Professional Soltron and Ergoline equipment for a tan suited to every skin." },
-    prices: { eyebrow: "Prices", title: "Tanning options", text: "Sessions by the minute, packages and memberships." },
+    prices: { eyebrow: "Prices", title: "Tanning options", text: "Sessions by the minute from €1.20 and packages with extra credit." },
     gallery: { eyebrow: "Gallery", title: "Inside Diamond Shine", text: "Reception, lounge and tanning rooms at our Marina Banús studio." },
     faq: { eyebrow: "FAQ", title: "Frequently asked questions", text: "Clear answers before your first session." },
     contact: { eyebrow: "Contact", title: "Visit us in Puerto Banús", text: "We're in Marina Banús. Message us, call us or drop by." },
