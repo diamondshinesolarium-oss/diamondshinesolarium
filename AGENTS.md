@@ -38,3 +38,4 @@ use the editor.
 - Booking and the contact form open WhatsApp with a prefilled message (no data stored); swap to `site.bookingUrl` when an online booking system exists.
 - Third-party scripts and embeds (Google Analytics, Google Maps) load only after consent via `ConsentProvider`; why: GDPR.
 - Every route states its sitemap decision in `staticData.sitemap` (`src/lib/sitemap.ts` makes the field required); `/sitemap.xml` derives its URLs from the router and takes the public origin from `site.url`; why: a new page can never silently miss the sitemap, and the domain changes in one place.
+- The palette lives only in `src/styles.css` as raw palette variables mapped to role tokens (`background`, `surface`, `panel`, `ink` bands, `neon` accent); components use role classes such as `text-neon` or `bg-panel`, never hex values; why: the whole identity can be re-themed in one file.

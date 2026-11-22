@@ -7,7 +7,7 @@ import { LocalLink } from "@/components/site/LocalLink";
 export function Faq() {
   const t = useT();
   return (
-    <section className="bg-sand/60 py-24 md:py-36">
+    <section className="bg-surface py-24 md:py-36">
       <div className="container-luxe grid gap-14 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <SectionHeading eyebrow={t.faq.eyebrow} title={t.faq.heading} />

@@ -19,7 +19,7 @@ export function LegalPage({ kind }: { kind: Kind }) {
   return (
     <article className="pt-36 pb-24 md:pt-44 md:pb-32">
       <div className="container-luxe max-w-3xl">
-        <p className="eyebrow text-gold-deep">{site.name}</p>
+        <p className="eyebrow text-neon">{site.name}</p>
         <h1 className="mt-6 text-5xl md:text-6xl">{doc.title}</h1>
         <p className="mt-4 text-sm text-muted-foreground">{t.legal.updated}</p>
         <div className="mt-14 space-y-12">

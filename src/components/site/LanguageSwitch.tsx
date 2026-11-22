@@ -22,7 +22,7 @@ export function LanguageSwitch({ className }: { className?: string }) {
             aria-label={dictionaries[l].meta.label}
             className={cn(
               "px-1.5 py-2 transition-colors duration-300",
-              l === lang ? "text-gold" : "opacity-70 hover:opacity-100 hover:text-gold",
+              l === lang ? "text-neon" : "opacity-70 hover:opacity-100 hover:text-neon",
             )}
           >
             {dictionaries[l].meta.short}

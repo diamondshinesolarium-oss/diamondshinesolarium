@@ -20,8 +20,8 @@ export function SectionHeading({
 }) {
   return (
     <Reveal className={cn("max-w-3xl", align === "center" && "mx-auto text-center", className)}>
-      <p className={cn("eyebrow flex items-center gap-4", tone === "dark" ? "text-gold" : "text-gold-deep", align === "center" && "justify-center")}>
-        <span className="h-px w-10 bg-gold" aria-hidden="true" />
+      <p className={cn("eyebrow flex items-center gap-4", tone === "dark" ? "text-neon" : "text-neon", align === "center" && "justify-center")}>
+        <span className="h-px w-10 bg-neon" aria-hidden="true" />
         {eyebrow}
       </p>
       <Tag

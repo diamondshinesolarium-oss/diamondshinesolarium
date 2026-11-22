@@ -11,7 +11,8 @@ export function CtaBand() {
   return (
     <section className="grain relative isolate overflow-hidden bg-ink py-28 text-center text-ink-foreground md:py-40">
       <img src={marinaImg} alt="" aria-hidden="true" width={1600} height={1008} loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35" />
-      <div className="absolute inset-0 -z-10 bg-ink/50" aria-hidden="true" />
+      <div className="absolute inset-0 -z-10 bg-ink/60" aria-hidden="true" />
+      <div className="bg-neon-glow absolute inset-0 -z-10" aria-hidden="true" />
       <Reveal className="container-luxe">
         <h2 className="mx-auto max-w-3xl text-4xl leading-[1.05] md:text-6xl">{t.cta.heading}</h2>
         <p className="mx-auto mt-6 max-w-md text-ink-foreground/80">{t.cta.text}</p>

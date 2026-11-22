@@ -25,14 +25,14 @@ function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-ink px-4 text-ink-foreground">
       <div className="max-w-md text-center">
-        <p className="eyebrow text-gold">Diamond Shine Solarium</p>
+        <p className="eyebrow text-neon">Diamond Shine Solarium</p>
         <h1 className="mt-6 font-display text-8xl">404</h1>
         <h2 className="mt-4 text-2xl">{t.title}</h2>
         <p className="mt-3 text-sm text-ink-muted">{t.text}</p>
         <div className="mt-8">
           <Link
             to={lang === "en" ? "/en" : "/es"}
-            className="inline-flex h-12 items-center justify-center bg-gold-gradient px-7 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-ink"
+            className="inline-flex h-12 items-center justify-center bg-neon-gradient px-7 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-ink"
           >
             {t.back}
           </Link>
@@ -94,7 +94,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Diamond Shine Solarium — Puerto Banús, Marbella" },
       { name: "description", content: dictionaries.es.seo.home.description },
       { name: "author", content: site.name },
-      { name: "theme-color", content: "#111111" },
+      { name: "theme-color", content: "#05070A" },
       { property: "og:site_name", content: site.name },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

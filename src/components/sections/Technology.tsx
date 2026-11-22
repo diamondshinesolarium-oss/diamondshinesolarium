@@ -12,7 +12,7 @@ export function Technology() {
   const t = useT();
   return (
     <section className="grain relative isolate overflow-hidden bg-ink py-24 text-ink-foreground md:py-36">
-      <img src={lightImg} alt="" aria-hidden="true" width={1600} height={1008} loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-25" />
+      <img src={lightImg} alt="" aria-hidden="true" width={1600} height={1008} loading="lazy" className="neon-tint absolute inset-0 -z-10 h-full w-full object-cover opacity-30" />
       <div className="container-luxe">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
           <SectionHeading tone="dark" eyebrow={t.technology.eyebrow} title={t.technology.heading} className="lg:col-span-7" />
@@ -33,7 +33,7 @@ export function Technology() {
             />
           </Reveal>
           <Reveal className="flex flex-col justify-between border border-ink-line p-8 md:col-span-4" delay={150}>
-            <p className="eyebrow text-gold">{t.technology.brandsLabel}</p>
+            <p className="eyebrow text-neon">{t.technology.brandsLabel}</p>
             <p className="mt-8 font-display text-4xl tracking-[0.06em] uppercase md:text-5xl">{site.equipmentBrand}</p>
             <p className="eyebrow mt-8 text-ink-muted">{t.technology.modelsLabel}</p>
             <ul className="mt-3 divide-y divide-ink-line border-y border-ink-line">
@@ -51,14 +51,14 @@ export function Technology() {
         </div>
 
         <div className="mt-20">
-          <p className="eyebrow text-gold">{t.technology.featuresLabel}</p>
+          <p className="eyebrow text-neon">{t.technology.featuresLabel}</p>
           <ul className="mt-8 grid gap-px overflow-hidden border border-ink-line bg-ink-line sm:grid-cols-2 lg:grid-cols-4">
             {site.cabinFeatures.map((key, i) => {
               const Icon = ICONS[key];
               const f = t.technology.features[key];
               return (
                 <Reveal as="li" key={key} delay={i * 90} className="bg-ink p-8">
-                  <Icon className="h-6 w-6 text-gold" strokeWidth={1.2} aria-hidden="true" />
+                  <Icon className="h-6 w-6 text-neon" strokeWidth={1.2} aria-hidden="true" />
                   <h3 className="mt-6 text-2xl">{f.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink-muted">{f.text}</p>
                 </Reveal>

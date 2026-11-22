@@ -60,9 +60,9 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
             <Reveal
               key={c.key}
               delay={i * 100}
-              className="flex flex-col rounded-sm border border-border bg-card p-8 transition-all duration-700 ease-[var(--ease-luxe)] hover:-translate-y-1 hover:shadow-luxe"
+              className="flex flex-col rounded-sm border border-border bg-card p-8 hover:border-neon/50 transition-all duration-700 ease-[var(--ease-luxe)] hover:-translate-y-1 hover:shadow-luxe"
             >
-              <span className="eyebrow text-gold-deep">{p.cabin}</span>
+              <span className="eyebrow text-neon">{p.cabin}</span>
               <h4 className="mt-3 text-[1.75rem] leading-tight">{c.name}</h4>
               <p className="mt-6 flex items-baseline gap-2 whitespace-nowrap border-t border-border pt-6">
                 <Price value={c.pricePerMinute} lang={lang} className="text-5xl" />
@@ -91,16 +91,16 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
                 delay={i * 100}
                 className={cn(
                   "relative flex flex-col rounded-sm border p-8 transition-all duration-700 ease-[var(--ease-luxe)] hover:-translate-y-1 hover:shadow-luxe",
-                  featured ? "border-ink bg-ink text-ink-foreground" : "border-border bg-card",
+                  featured ? "border-neon/60 bg-panel text-ink-foreground shadow-neon-soft" : "border-border bg-card hover:border-neon/50",
                 )}
               >
                 {featured && (
-                  <span className="bg-gold-gradient eyebrow absolute -top-3 left-8 px-3 py-1.5 text-[0.6rem] text-ink">{p.bestValue}</span>
+                  <span className="bg-neon-gradient eyebrow absolute -top-3 left-8 px-3 py-1.5 text-[0.6rem] text-ink">{p.bestValue}</span>
                 )}
                 <h4 className="text-[1.75rem] leading-tight">{fill(p.packageName, { size: pkg.size })}</h4>
 
                 <div className={cn("my-8 border-y py-6", featured ? "border-ink-line" : "border-border")}>
-                  <span className={cn("eyebrow", featured ? "text-gold" : "text-gold-deep")}>{p.youGet}</span>
+                  <span className={cn("eyebrow", featured ? "text-neon" : "text-neon")}>{p.youGet}</span>
                   <p className="mt-2 flex items-baseline gap-2 whitespace-nowrap">
                     <Price value={pkg.credit} lang={lang} decimals={false} className="text-5xl" />
                     <span className={cn("text-sm", featured ? "text-ink-muted" : "text-muted-foreground")}>{p.credit}</span>
@@ -113,7 +113,7 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
                 <ul className="space-y-3 text-sm">
                   {[fill(p.bonus, { amount: euro.format(packageBonus(pkg)) }), fill(p.validFor, { months: pkg.validMonths })].map((b) => (
                     <li key={b} className="flex gap-3">
-                      <Check className={cn("mt-0.5 h-4 w-4 shrink-0", featured ? "text-gold" : "text-gold-deep")} strokeWidth={1.5} />
+                      <Check className={cn("mt-0.5 h-4 w-4 shrink-0", featured ? "text-neon" : "text-neon")} strokeWidth={1.5} />
                       {b}
                     </li>
                   ))}
@@ -121,7 +121,7 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
 
                 <div className="mt-auto pt-10">
                   <BookButton
-                    variant={featured ? "gold" : "outline"}
+                    variant={featured ? "neon" : "outline"}
                     className="w-full"
                     label={p.ctaPackage}
                     message={fill(p.packageMessage, { size: pkg.size })}

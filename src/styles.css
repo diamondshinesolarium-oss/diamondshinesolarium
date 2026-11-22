@@ -9,8 +9,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Diamond Shine design system — "Champagne noir".
- * Off-white editorial pages, ink-black cinematic bands, soft gold hairlines.
+ * Diamond Shine design system — "Black & Neon Cyan".
+ * Deep black pages, blue-black panels and cyan LED light, inspired by the studio's turquoise lighting.
+ * Every color lives here; components only use these tokens.
  */
 
 @theme inline {
@@ -50,11 +51,12 @@
   --color-ink-foreground: var(--ink-foreground);
   --color-ink-muted: var(--ink-muted);
   --color-ink-line: var(--ink-line);
-  --color-gold: var(--gold);
-  --color-gold-deep: var(--gold-deep);
-  --color-champagne: var(--champagne);
-  --color-sand: var(--sand);
-  --color-bronze: var(--bronze);
+  --color-surface: var(--surface);
+  --color-panel: var(--panel);
+  --color-neon: var(--neon);
+  --color-neon-hover: var(--neon-hover);
+  --color-electric: var(--electric);
+  --color-turquoise: var(--turquoise);
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-foreground: var(--whatsapp-foreground);
 
@@ -66,56 +68,71 @@
   --color-sidebar-accent-foreground: var(--accent-foreground);
   --color-sidebar-border: var(--border);
   --color-sidebar-ring: var(--ring);
-  --color-chart-1: var(--gold);
-  --color-chart-2: var(--bronze);
-  --color-chart-3: var(--champagne);
-  --color-chart-4: var(--ink);
-  --color-chart-5: var(--sand);
+  --color-chart-1: var(--neon);
+  --color-chart-2: var(--electric);
+  --color-chart-3: var(--turquoise);
+  --color-chart-4: var(--neon-hover);
+  --color-chart-5: var(--ink-muted);
 
   --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 :root {
+  color-scheme: dark;
   --radius: 0.25rem;
 
-  --background: oklch(0.974 0.006 84.6);
-  --foreground: oklch(0.178 0 0);
-  --card: oklch(0.99 0.004 84.6);
-  --card-foreground: oklch(0.178 0 0);
-  --popover: oklch(0.99 0.004 84.6);
-  --popover-foreground: oklch(0.178 0 0);
-  --primary: oklch(0.178 0 0);
-  --primary-foreground: oklch(0.974 0.006 84.6);
-  --secondary: oklch(0.928 0.021 79.1);
-  --secondary-foreground: oklch(0.178 0 0);
-  --muted: oklch(0.945 0.012 82);
-  --muted-foreground: oklch(0.48 0.012 76.5);
-  --accent: oklch(0.888 0.04 80.9);
-  --accent-foreground: oklch(0.178 0 0);
-  --destructive: oklch(0.55 0.17 30);
-  --destructive-foreground: oklch(0.974 0.006 84.6);
-  --border: oklch(0.896 0.019 83.1);
-  --input: oklch(0.86 0.022 83);
-  --ring: oklch(0.736 0.082 79.7);
+  /* Official palette */
+  --black: #05070a; /* main background */
+  --black-2: #0b1118; /* secondary background */
+  --black-3: #101b24; /* cards and panels */
+  --neon: #00d9ff; /* neon cyan */
+  --neon-hover: #33e6ff;
+  --electric: #2563ff;
+  --turquoise: #00f5d4;
+  --ice: #f4faff; /* main text */
+  --steel: #8fa3b3; /* secondary text */
 
-  --ink: oklch(0.178 0 0);
-  --ink-soft: oklch(0.215 0.005 67.6);
-  --ink-foreground: oklch(0.95 0.015 84);
-  --ink-muted: oklch(0.72 0.02 80);
-  --ink-line: oklch(0.736 0.082 79.7 / 22%);
-  --gold: oklch(0.736 0.082 79.7);
-  --gold-deep: oklch(0.6 0.085 76);
-  --champagne: oklch(0.888 0.04 80.9);
-  --sand: oklch(0.928 0.021 79.1);
-  --bronze: oklch(0.567 0.085 62.8);
+  --background: var(--black);
+  --foreground: var(--ice);
+  --card: var(--black-3);
+  --card-foreground: var(--ice);
+  --popover: var(--black-3);
+  --popover-foreground: var(--ice);
+  --primary: var(--neon);
+  --primary-foreground: var(--black);
+  --secondary: var(--black-2);
+  --secondary-foreground: var(--ice);
+  --muted: var(--black-2);
+  --muted-foreground: var(--steel);
+  --accent: color-mix(in oklab, var(--neon) 12%, var(--black-3));
+  --accent-foreground: var(--ice);
+  --destructive: oklch(0.65 0.2 25);
+  --destructive-foreground: var(--ice);
+  --border: color-mix(in oklab, var(--neon) 16%, transparent);
+  --input: color-mix(in oklab, var(--neon) 26%, transparent);
+  --ring: var(--neon);
+
+  /* Cinematic bands (hero, technology, reviews, footer) */
+  --ink: var(--black-2);
+  --ink-soft: var(--black-3);
+  --ink-foreground: var(--ice);
+  --ink-muted: var(--steel);
+  --ink-line: color-mix(in oklab, var(--neon) 20%, transparent);
+  --surface: var(--black-2);
+  --panel: var(--black-3);
   --whatsapp: oklch(0.62 0.15 150);
   --whatsapp-foreground: oklch(0.99 0 0);
 
-  --gradient-gold: linear-gradient(120deg, oklch(0.62 0.08 72) 0%, oklch(0.8 0.08 82) 45%, oklch(0.68 0.085 76) 100%);
-  --gradient-ink-fade: linear-gradient(90deg, oklch(0.12 0 0 / 92%) 0%, oklch(0.12 0 0 / 60%) 45%, oklch(0.12 0 0 / 0%) 100%);
-  --gradient-ink-bottom: linear-gradient(0deg, oklch(0.12 0 0 / 85%) 0%, oklch(0.12 0 0 / 0%) 60%);
-  --shadow-luxe: 0 30px 60px -30px oklch(0.178 0 0 / 35%);
-  --shadow-gold: 0 18px 40px -18px oklch(0.6 0.085 76 / 55%);
+  --gradient-neon: linear-gradient(120deg, var(--turquoise) 0%, var(--neon) 45%, var(--neon-hover) 100%);
+  --gradient-neon-text: linear-gradient(110deg, var(--turquoise) 0%, var(--neon) 50%, var(--electric) 110%);
+  --gradient-ink-fade: linear-gradient(90deg, rgb(5 7 10 / 94%) 0%, rgb(5 7 10 / 65%) 45%, rgb(5 7 10 / 10%) 100%);
+  --gradient-ink-bottom: linear-gradient(0deg, rgb(5 7 10 / 90%) 0%, rgb(5 7 10 / 0%) 60%);
+  --gradient-neon-glow:
+    radial-gradient(ellipse 60% 50% at 85% 15%, color-mix(in oklab, var(--neon) 22%, transparent), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 0% 100%, color-mix(in oklab, var(--electric) 18%, transparent), transparent 70%);
+  --shadow-luxe: 0 28px 60px -30px rgb(0 0 0 / 85%), 0 0 36px -14px color-mix(in oklab, var(--neon) 28%, transparent);
+  --shadow-neon: 0 0 0 1px color-mix(in oklab, var(--neon) 55%, transparent), 0 0 22px -2px color-mix(in oklab, var(--neon) 50%, transparent), 0 0 60px -10px color-mix(in oklab, var(--neon) 35%, transparent);
+  --shadow-neon-soft: 0 0 18px -4px color-mix(in oklab, var(--neon) 45%, transparent);
 }
 
 @layer base {
@@ -152,12 +169,12 @@
   }
 
   ::selection {
-    background: var(--champagne);
-    color: var(--ink);
+    background: var(--neon);
+    color: var(--black);
   }
 
   :focus-visible {
-    outline: 1px solid var(--gold);
+    outline: 1px solid var(--neon);
     outline-offset: 3px;
   }
 }
@@ -171,16 +188,35 @@
   text-transform: uppercase;
 }
 
-/* Gold gradient text */
-@utility text-gold-gradient {
-  background: var(--gradient-gold);
+/* Neon gradient text with a soft glow */
+@utility text-neon-gradient {
+  background: var(--gradient-neon-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  filter: drop-shadow(0 0 18px color-mix(in oklab, var(--neon) 45%, transparent));
 }
 
-@utility bg-gold-gradient {
-  background: var(--gradient-gold);
+@utility bg-neon-gradient {
+  background: var(--gradient-neon);
+}
+
+/* Ambient cyan LED light for dark bands */
+@utility bg-neon-glow {
+  background: var(--gradient-neon-glow);
+}
+
+/* Recolors the warm "light lines" artwork to the cyan LED palette */
+@utility neon-tint {
+  filter: hue-rotate(160deg) saturate(1.6) brightness(1.05);
+}
+
+@utility icon-glow {
+  filter: drop-shadow(0 0 6px color-mix(in oklab, var(--neon) 70%, transparent));
+}
+
+@utility text-glow {
+  text-shadow: 0 0 18px color-mix(in oklab, var(--neon) 55%, transparent);
 }
 
 @utility bg-ink-fade {
@@ -195,14 +231,18 @@
   box-shadow: var(--shadow-luxe);
 }
 
-@utility shadow-gold {
-  box-shadow: var(--shadow-gold);
+@utility shadow-neon {
+  box-shadow: var(--shadow-neon);
 }
 
-/* Thin gold rule */
+@utility shadow-neon-soft {
+  box-shadow: var(--shadow-neon-soft);
+}
+
+/* Thin neon rule */
 @utility hairline {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  background: linear-gradient(90deg, transparent, var(--neon), transparent);
 }
 
 @utility container-luxe {

@@ -9,17 +9,17 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-ink text-ink-foreground hover:bg-ink-soft hover:shadow-luxe",
-        gold: "bg-gold-gradient text-ink shadow-gold hover:brightness-110 hover:-translate-y-0.5",
-        outline: "border border-ink/80 bg-transparent text-ink hover:bg-ink hover:text-ink-foreground",
+        default: "border border-border bg-panel text-foreground hover:border-neon hover:text-neon hover:shadow-neon-soft",
+        neon: "bg-neon text-ink shadow-neon-soft hover:bg-neon-hover hover:shadow-neon hover:-translate-y-0.5",
+        outline: "border border-neon/50 bg-ink/40 text-foreground hover:border-neon hover:text-neon hover:shadow-neon-soft",
         outlineLight:
-          "border border-ink-foreground/50 bg-transparent text-ink-foreground backdrop-blur-sm hover:border-gold hover:text-gold",
-        ghost: "text-foreground hover:bg-sand",
-        ghostLight: "text-ink-foreground hover:text-gold",
+          "border border-neon/45 bg-ink/30 text-ink-foreground backdrop-blur-sm hover:border-neon hover:text-neon hover:shadow-neon-soft",
+        ghost: "text-foreground hover:bg-accent hover:text-neon",
+        ghostLight: "text-ink-foreground hover:text-neon",
         whatsapp: "bg-whatsapp text-whatsapp-foreground hover:brightness-110",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-champagne",
-        link: "px-0 text-foreground underline-offset-8 hover:underline",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-accent",
+        link: "px-0 text-neon underline-offset-8 hover:underline hover:text-neon-hover",
       },
       size: {
         default: "h-12 px-7",

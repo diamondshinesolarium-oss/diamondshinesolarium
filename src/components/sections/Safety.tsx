@@ -9,10 +9,10 @@ export function SafetyNotice() {
   return (
     <section className="py-16">
       <div className="container-luxe">
-        <Reveal className="flex flex-col gap-6 border border-gold/50 bg-card p-8 md:flex-row md:items-start md:p-10">
-          <AlertTriangle className="h-7 w-7 shrink-0 text-gold-deep" strokeWidth={1.2} aria-hidden="true" />
+        <Reveal className="flex flex-col gap-6 border border-neon/50 bg-card p-8 md:flex-row md:items-start md:p-10">
+          <AlertTriangle className="h-7 w-7 shrink-0 text-neon" strokeWidth={1.2} aria-hidden="true" />
           <div>
-            <p className="eyebrow text-gold-deep">{t.safety.warningTitle}</p>
+            <p className="eyebrow text-neon">{t.safety.warningTitle}</p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t.safety.warning}</p>
             <LocalLink page="safety" className="link-underline mt-4 inline-block text-sm">
               {t.nav.safety} →
@@ -34,8 +34,8 @@ export function SafetyFull() {
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{t.safety.intro}</p>
         </Reveal>
 
-        <Reveal className="mt-14 border-l-2 border-gold bg-card p-8 md:p-10">
-          <p className="eyebrow flex items-center gap-3 text-gold-deep">
+        <Reveal className="mt-14 border-l-2 border-neon bg-card p-8 md:p-10">
+          <p className="eyebrow flex items-center gap-3 text-neon">
             <AlertTriangle className="h-4 w-4" /> {t.safety.warningTitle}
           </p>
           <p className="mt-4 text-lg leading-relaxed">{t.safety.warning}</p>
@@ -47,7 +47,7 @@ export function SafetyFull() {
             <ul className="mt-8 space-y-4">
               {t.safety.guidelines.map((g) => (
                 <li key={g} className="flex gap-4 border-b border-border pb-4 leading-relaxed">
-                  <Check className="mt-1 h-4 w-4 shrink-0 text-gold-deep" strokeWidth={1.5} />
+                  <Check className="mt-1 h-4 w-4 shrink-0 text-neon" strokeWidth={1.5} />
                   {g}
                 </li>
               ))}
@@ -58,7 +58,7 @@ export function SafetyFull() {
             <ul className="mt-8 space-y-4">
               {t.safety.contra.map((g) => (
                 <li key={g} className="flex gap-4 border-b border-border pb-4 leading-relaxed">
-                  <Stethoscope className="mt-1 h-4 w-4 shrink-0 text-gold-deep" strokeWidth={1.5} />
+                  <Stethoscope className="mt-1 h-4 w-4 shrink-0 text-neon" strokeWidth={1.5} />
                   {g}
                 </li>
               ))}

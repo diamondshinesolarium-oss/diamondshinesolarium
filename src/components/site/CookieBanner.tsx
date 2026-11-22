@@ -29,15 +29,15 @@ export function CookieBanner() {
           aria-label={t.cookies.title}
           className="fade-up fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-3xl border border-ink-line bg-ink p-5 text-ink-foreground shadow-luxe md:bottom-6 md:p-7"
         >
-          <p className="eyebrow text-gold">{t.cookies.title}</p>
+          <p className="eyebrow text-neon">{t.cookies.title}</p>
           <p className="mt-2 text-xs leading-relaxed text-ink-muted md:mt-3 md:text-sm">
             {t.cookies.text}{" "}
-            <LocalLink page="cookies" className="text-ink-foreground underline underline-offset-4 hover:text-gold">
+            <LocalLink page="cookies" className="text-ink-foreground underline underline-offset-4 hover:text-neon">
               {t.cookies.more}
             </LocalLink>
           </p>
           <div className="mt-4 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap md:mt-5">
-            <Button variant="gold" size="sm" onClick={() => save({ analytics: true, media: true })}>
+            <Button variant="neon" size="sm" onClick={() => save({ analytics: true, media: true })}>
               {t.cookies.accept}
             </Button>
             <Button variant="outlineLight" size="sm" onClick={() => save({ analytics: false, media: false })}>

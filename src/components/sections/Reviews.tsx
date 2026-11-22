@@ -12,13 +12,13 @@ export function Reviews() {
     <section className="grain relative bg-ink py-24 text-ink-foreground md:py-32">
       <div className="container-luxe grid items-center gap-14 lg:grid-cols-2">
         <Reveal>
-          <p className="eyebrow flex items-center gap-4 text-gold">
-            <span className="h-px w-10 bg-gold" aria-hidden="true" />
+          <p className="eyebrow flex items-center gap-4 text-neon">
+            <span className="h-px w-10 bg-neon" aria-hidden="true" />
             {t.reviews.eyebrow}
           </p>
           <h2 className="mt-6 text-[2.15rem] leading-[1.08] md:text-5xl">{t.reviews.heading}</h2>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button asChild variant="gold">
+            <Button asChild variant="neon">
               <a href={site.google.reviewsUrl} target="_blank" rel="noopener noreferrer">
                 <GoogleIcon /> {t.reviews.read}
               </a>
@@ -40,7 +40,7 @@ export function Reviews() {
             {[1, 2, 3, 4, 5].map((n) => (
               <Star
                 key={n}
-                className={n <= Math.round(rating) ? "h-5 w-5 fill-gold text-gold" : "h-5 w-5 text-gold"}
+                className={n <= Math.round(rating) ? "h-5 w-5 fill-neon text-neon" : "h-5 w-5 text-neon"}
                 strokeWidth={1.2}
                 aria-hidden="true"
               />

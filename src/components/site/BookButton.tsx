@@ -5,7 +5,7 @@ import { WhatsAppIcon } from "./icons";
 
 /** Primary booking CTA: online booking if configured, otherwise WhatsApp with a prefilled message. */
 export function BookButton({
-  variant = "gold",
+  variant = "neon",
   size,
   className,
   label,

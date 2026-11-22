@@ -28,14 +28,14 @@ export function MapEmbed() {
     <div className="relative isolate flex h-full min-h-[420px] items-center justify-center overflow-hidden bg-ink p-8 text-center text-ink-foreground">
       <img src={marinaImg} alt="" aria-hidden="true" width={1600} height={1008} loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40" />
       <div className="max-w-sm">
-        <MapPin className="mx-auto h-8 w-8 text-gold" strokeWidth={1.2} />
+        <MapPin className="mx-auto h-8 w-8 text-neon" strokeWidth={1.2} />
         <p className="mt-4 font-display text-2xl">{site.address.streetShort}</p>
         <p className="mt-1 text-sm text-ink-muted">
           {site.address.postalCode} {site.address.area}, {site.address.locality}
         </p>
         <p className="mt-6 text-xs leading-relaxed text-ink-muted">{t.location.mapConsent}</p>
         <div className="mt-6 flex flex-col justify-center gap-2 sm:flex-row">
-          <Button variant="gold" size="sm" onClick={() => save({ analytics: consent.analytics, media: true })}>
+          <Button variant="neon" size="sm" onClick={() => save({ analytics: consent.analytics, media: true })}>
             {t.location.loadMap}
           </Button>
           <Button asChild variant="outlineLight" size="sm">
@@ -55,7 +55,7 @@ export function ContactDetails() {
   return (
     <div>
       <div className={row}>
-        <MapPin className="mt-1 h-5 w-5 shrink-0 text-gold-deep" strokeWidth={1.3} />
+        <MapPin className="mt-1 h-5 w-5 shrink-0 text-neon" strokeWidth={1.3} />
         <div>
           <p className="eyebrow text-muted-foreground">{t.location.address}</p>
           <address className="mt-2 not-italic leading-relaxed">
@@ -66,7 +66,7 @@ export function ContactDetails() {
         </div>
       </div>
       <div className={row}>
-        <Phone className="mt-1 h-5 w-5 shrink-0 text-gold-deep" strokeWidth={1.3} />
+        <Phone className="mt-1 h-5 w-5 shrink-0 text-neon" strokeWidth={1.3} />
         <div>
           <p className="eyebrow text-muted-foreground">{t.location.phone}</p>
           <a href={telLink} className="link-underline mt-2 inline-block">
@@ -76,7 +76,7 @@ export function ContactDetails() {
       </div>
       {site.email && (
         <div className={row}>
-          <Mail className="mt-1 h-5 w-5 shrink-0 text-gold-deep" strokeWidth={1.3} />
+          <Mail className="mt-1 h-5 w-5 shrink-0 text-neon" strokeWidth={1.3} />
           <div>
             <p className="eyebrow text-muted-foreground">{t.location.email}</p>
             <a href={`mailto:${site.email}`} className="link-underline mt-2 inline-block">
@@ -86,7 +86,7 @@ export function ContactDetails() {
         </div>
       )}
       <div className={row}>
-        <InstagramIcon className="mt-1 h-5 w-5 shrink-0 text-gold-deep" />
+        <InstagramIcon className="mt-1 h-5 w-5 shrink-0 text-neon" />
         <div>
           <p className="eyebrow text-muted-foreground">{t.location.social}</p>
           <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" className="link-underline mt-2 inline-block">
@@ -95,7 +95,7 @@ export function ContactDetails() {
         </div>
       </div>
       <div className="flex gap-4 py-5">
-        <Clock className="mt-1 h-5 w-5 shrink-0 text-gold-deep" strokeWidth={1.3} />
+        <Clock className="mt-1 h-5 w-5 shrink-0 text-neon" strokeWidth={1.3} />
         <div className="flex-1">
           <p className="eyebrow mb-3 text-muted-foreground">{t.location.hours}</p>
           <Hours />

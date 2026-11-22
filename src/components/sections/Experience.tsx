@@ -7,7 +7,7 @@ import { salonPhotos } from "@/content/gallery";
 export function Experience() {
   const t = useT();
   return (
-    <section className="bg-sand/60 py-24 md:py-36">
+    <section className="bg-surface py-24 md:py-36">
       <div className="container-luxe grid gap-16 lg:grid-cols-12 lg:gap-20">
         <div className="relative lg:col-span-5">
           <Reveal className="lg:sticky lg:top-28">
@@ -34,9 +34,9 @@ export function Experience() {
           <ol className="mt-14">
             {t.experience.items.map((item, i) => (
               <Reveal as="li" key={item.title} delay={i * 80} className="group grid grid-cols-[3.5rem_1fr] gap-4 border-t border-border py-8 last:border-b">
-                <span className="font-display text-2xl text-gold-deep italic">0{i + 1}</span>
+                <span className="font-display text-2xl text-neon italic">0{i + 1}</span>
                 <div>
-                  <h3 className="text-2xl transition-colors group-hover:text-gold-deep md:text-[1.7rem]">{item.title}</h3>
+                  <h3 className="text-2xl transition-colors group-hover:text-neon md:text-[1.7rem]">{item.title}</h3>
                   <p className="mt-2 leading-relaxed text-muted-foreground">{item.text}</p>
                 </div>
               </Reveal>

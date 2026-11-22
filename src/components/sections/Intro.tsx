@@ -17,8 +17,8 @@ export function Intro() {
       <div className="container-luxe grid items-center gap-14 lg:grid-cols-12 lg:gap-20">
         <div className="lg:col-span-6">
           <Reveal>
-            <p className="eyebrow flex items-center gap-4 text-gold-deep">
-              <span className="h-px w-10 bg-gold" aria-hidden="true" />
+            <p className="eyebrow flex items-center gap-4 text-neon">
+              <span className="h-px w-10 bg-neon" aria-hidden="true" />
               {t.intro.eyebrow}
             </p>
             <h2 className="mt-6 text-[2.15rem] leading-[1.08] md:text-5xl">{t.intro.heading}</h2>
@@ -40,7 +40,7 @@ export function Intro() {
               className="aspect-[4/5] w-full object-cover transition-transform duration-[2s] ease-[var(--ease-luxe)] hover:scale-105 md:aspect-[5/4]"
             />
           </div>
-          <div className="absolute -bottom-8 -left-4 hidden border border-gold/40 bg-background px-7 py-5 shadow-luxe md:block">
+          <div className="absolute -bottom-8 -left-4 hidden border border-neon/40 bg-background px-7 py-5 shadow-luxe md:block">
             <p className="font-display text-4xl">{site.foundedYear}</p>
             <p className="eyebrow mt-1 text-muted-foreground">{t.intro.stats.since}</p>
           </div>
@@ -54,7 +54,7 @@ export function Intro() {
               <dt className="eyebrow text-muted-foreground">{s.label}</dt>
               <dd className={`mt-3 flex items-center gap-2 font-display ${s.small ? "text-2xl" : "text-4xl md:text-5xl"}`}>
                 {s.value}
-                {s.star && <Star className="h-5 w-5 fill-gold text-gold" aria-hidden="true" />}
+                {s.star && <Star className="h-5 w-5 fill-neon text-neon" aria-hidden="true" />}
               </dd>
             </Reveal>
           ))}

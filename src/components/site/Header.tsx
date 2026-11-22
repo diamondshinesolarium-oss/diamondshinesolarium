@@ -39,7 +39,7 @@ export function Header() {
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-50 text-ink-foreground transition-all duration-700 ease-[var(--ease-luxe)]",
-          scrolled || open ? "bg-ink/92 py-3 backdrop-blur-md shadow-luxe" : "bg-transparent py-6",
+          scrolled || open ? "border-b border-ink-line bg-ink/90 py-3 backdrop-blur-md shadow-luxe" : "border-b border-transparent bg-transparent py-6",
         )}
       >
         <div className="container-luxe flex items-center justify-between gap-6">
@@ -52,7 +52,7 @@ export function Header() {
               <LocalLink
                 key={key}
                 page={key}
-                className="link-underline pb-1 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-ink-foreground/85 transition-colors hover:text-gold [&.active]:text-gold"
+                className="link-underline pb-1 text-[0.6875rem] font-medium uppercase tracking-[0.24em] text-ink-foreground/85 transition-colors hover:text-neon [&.active]:text-neon"
               >
                 {t.nav[key]}
               </LocalLink>
@@ -89,10 +89,10 @@ export function Header() {
               <LocalLink
                 key={key}
                 page={key}
-                className="fade-up flex items-baseline justify-between border-b border-ink-line py-5 font-display text-3xl text-ink-foreground transition-colors hover:text-gold [&.active]:text-gold"
+                className="fade-up flex items-baseline justify-between border-b border-ink-line py-5 font-display text-3xl text-ink-foreground transition-colors hover:text-neon [&.active]:text-neon"
               >
                 <span>{t.nav[key]}</span>
-                <span className="text-xs font-sans tracking-[0.3em] text-gold">0{i + 1}</span>
+                <span className="text-xs font-sans tracking-[0.3em] text-neon">0{i + 1}</span>
               </LocalLink>
             ))}
           </nav>
@@ -121,7 +121,7 @@ export function Header() {
               href={site.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs tracking-[0.2em] hover:text-gold"
+              className="flex items-center gap-2 text-xs tracking-[0.2em] hover:text-neon"
             >
               <InstagramIcon className="h-5 w-5" /> {site.social.instagramHandle}
             </a>
