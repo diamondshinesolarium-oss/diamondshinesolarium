@@ -301,6 +301,126 @@
   }
 }
 
+
+/* ---------- Neon LED animations (slow, soft, compositor-friendly) ---------- */
+
+@property --neon-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* Main buttons: a soft halo that breathes; hover lifts it to full intensity */
+@utility neon-breathe {
+  position: relative;
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow:
+      0 0 16px 0 color-mix(in oklab, var(--neon) 60%, transparent),
+      0 0 44px -4px color-mix(in oklab, var(--neon-hover) 45%, transparent);
+    opacity: 0.3;
+    animation: neon-breathe 4.8s ease-in-out infinite;
+    transition: opacity 0.45s var(--ease-luxe);
+  }
+  &:hover::before,
+  &:focus-visible::before {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* A comet of light slowly travelling around the border */
+@utility neon-border {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    pointer-events: none;
+    background: conic-gradient(
+      from var(--neon-angle),
+      transparent 0deg,
+      transparent 250deg,
+      color-mix(in oklab, var(--neon) 50%, transparent) 300deg,
+      var(--neon-hover) 340deg,
+      transparent 360deg
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box exclude,
+      linear-gradient(#000 0 0);
+    animation: neon-orbit 9s linear infinite;
+  }
+}
+
+/* Cards: neon border + outer glow on hover (keeps the scroll-reveal fade) */
+@utility card-neon {
+  &,
+  &.reveal {
+    transition:
+      opacity 1.1s var(--ease-luxe),
+      transform 1.1s var(--ease-luxe),
+      translate 0.5s var(--ease-luxe),
+      border-color 0.5s var(--ease-luxe),
+      box-shadow 0.5s var(--ease-luxe),
+      background-color 0.5s var(--ease-luxe);
+  }
+  &:hover {
+    border-color: var(--neon);
+    box-shadow: var(--shadow-neon);
+    transition-delay: 0s !important;
+  }
+}
+
+/* Thin turquoise LED line with a slow travelling highlight */
+@utility led-line {
+  position: relative;
+  display: block;
+  height: 1px;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--turquoise) 28%, transparent);
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, var(--turquoise), var(--neon-hover), transparent);
+    transform: translateX(-100%);
+    animation: led-run 7s ease-in-out infinite;
+  }
+}
+
+/* Soft pulsing glow for icons and small indicators */
+@utility neon-pulse {
+  animation: neon-pulse 3.8s ease-in-out infinite;
+}
+
+/* Floating light particle (see NeonParticles) */
+@utility neon-particle {
+  position: absolute;
+  width: var(--p-size, 3px);
+  height: var(--p-size, 3px);
+  border-radius: 9999px;
+  background: var(--neon-hover);
+  box-shadow:
+    0 0 6px 1px color-mix(in oklab, var(--neon) 80%, transparent),
+    0 0 16px 3px color-mix(in oklab, var(--neon) 35%, transparent);
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: particle-drift var(--p-duration, 20s) ease-in-out var(--p-delay, 0s) infinite;
+}
+
 @keyframes ken-burns {
   from {
     transform: scale(1.12);
@@ -331,6 +451,62 @@
   }
 }
 
+@keyframes neon-breathe {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes neon-orbit {
+  to {
+    --neon-angle: 360deg;
+  }
+}
+
+@keyframes led-run {
+  0% {
+    transform: translateX(-100%);
+  }
+  65%,
+  100% {
+    transform: translateX(260%);
+  }
+}
+
+@keyframes neon-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 2px color-mix(in oklab, var(--neon) 40%, transparent));
+  }
+  50% {
+    filter: drop-shadow(0 0 9px color-mix(in oklab, var(--neon-hover) 85%, transparent));
+  }
+}
+
+@keyframes particle-drift {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    opacity: var(--p-opacity, 0.7);
+  }
+  50% {
+    transform: translate3d(var(--p-dx, 20px), -60px, 0);
+  }
+  80% {
+    opacity: var(--p-opacity, 0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(calc(var(--p-dx, 20px) * -0.6), -130px, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -341,7 +517,20 @@
     transition: none !important;
   }
   .ken-burns,
-  .fade-up {
+  .fade-up,
+  .neon-pulse,
+  .neon-breathe::before,
+  .neon-border::before,
+  .led-line::after {
     animation: none !important;
+  }
+  .neon-breathe::before {
+    opacity: 0.45;
+  }
+  .neon-particle {
+    display: none;
+  }
+  .card-neon:hover {
+    translate: none !important;
   }
 }
