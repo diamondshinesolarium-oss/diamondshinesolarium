@@ -61,7 +61,7 @@ export const en: Dict = {
     },
     gallery: {
       title: "Gallery | Diamond Shine Solarium, Puerto Banús",
-      description: "Photos of the Diamond Shine tanning studio in Marina Banús, Marbella: reception, lounge and tanning rooms.",
+      description: "Photos of the Diamond Shine tanning studio in Marina Banús, Marbella: storefront, reception, tanning rooms and skincare.",
     },
     faq: {
       title: "Indoor Tanning FAQ | Diamond Shine Solarium Marbella",
@@ -138,7 +138,7 @@ export const en: Dict = {
     },
     note: "Features vary by tanning bed. Ask at reception.",
     imageAlt: "Megasun tanning bed with pink lighting at Diamond Shine",
-    image2Alt: "Megasun tanning bed with touchscreen at Diamond Shine, Puerto Banús",
+    image2Alt: "Megasun K11 tanning bed with LED lights at Diamond Shine, Puerto Banús",
   },
   pricing: {
     eyebrow: "03 — Tanning options & prices",
@@ -183,11 +183,15 @@ export const en: Dict = {
     heading: "Our studio.",
     intro: "Real photos of Diamond Shine in Marina Banús.",
     alts: {
-      reception: "Reception with lit staircase, pop-art paintings and the Diamond Shine logo",
-      lounge: "Waiting area with fuchsia sofas, reception desk and tanning skincare display",
-      tanningBed: "Open Megasun tanning bed with pink lighting",
-      cabin: "Megasun tanning bed with touchscreen and red light",
+      facade: "Diamond Shine Solarium storefront in Puerto Banús with its illuminated sign",
+      tanningBed: "Open Megasun tanning bed with pink lighting and touchscreen",
+      reception: "Reception with turquoise-lit staircase, pop-art paintings and the Diamond Shine logo",
+      k11Blue: "Megasun K11 tanning bed with blue and pink LED lights",
       corridor: "Corridor with turquoise lighting leading to the private tanning rooms",
+      counter: "Reception counter with a blue neon diamond and tanning skincare display",
+      cabinRed: "Megasun tanning room with red light and violet LEDs",
+      products: "Shelves of professional tanning skincare",
+      k11Gold: "Megasun K11 tanning bed with warm light and touchscreen",
     },
   },
   reviews: {
@@ -304,7 +308,7 @@ export const en: Dict = {
     studio: { eyebrow: "Our studio", title: "Diamond Shine, Puerto Banús", text: "A space dedicated to indoor tanning, with personal service since 2013." },
     technology: { eyebrow: "Technology", title: "Our tanning beds", text: "Professional Megasun P9S, K7S and K11 tanning beds for a tan suited to every skin." },
     prices: { eyebrow: "Prices", title: "Tanning options", text: "Sessions by the minute from €1.20 and packages with extra credit." },
-    gallery: { eyebrow: "Gallery", title: "Inside Diamond Shine", text: "Reception, lounge and tanning rooms at our Marina Banús studio." },
+    gallery: { eyebrow: "Gallery", title: "Inside Diamond Shine", text: "Storefront, reception and tanning rooms at our Marina Banús studio." },
     faq: { eyebrow: "FAQ", title: "Frequently asked questions", text: "Clear answers before your first session." },
     contact: { eyebrow: "Contact", title: "Visit us in Puerto Banús", text: "We're in Marina Banús. Message us, call us or drop by." },
     safety: { eyebrow: "UV safety", title: "Information & precautions", text: "What you should know about ultraviolet exposure." },

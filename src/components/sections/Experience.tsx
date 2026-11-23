@@ -20,12 +20,12 @@ export function Experience() {
               className="aspect-[4/5] w-full rounded-sm object-cover shadow-luxe"
             />
             <img
-              src={salonPhotos.lounge.url}
-              alt={t.gallery.alts.lounge}
-              width={1600}
-              height={683}
+              src={salonPhotos.reception}
+              alt={t.gallery.alts.reception}
+              width={1200}
+              height={1600}
               loading="lazy"
-              className="absolute -right-4 -bottom-10 hidden w-1/2 rounded-sm border-4 border-background object-cover shadow-luxe md:block lg:-right-10"
+              className="absolute -right-4 -bottom-10 hidden aspect-[4/5] w-1/2 rounded-sm border-4 border-background object-cover shadow-luxe md:block lg:-right-10"
             />
           </Reveal>
         </div>

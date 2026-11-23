@@ -142,10 +142,10 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
               <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">{p.productsText}</p>
             </div>
             <img
-              src={salonPhotos.products.url}
+              src={salonPhotos.products}
               alt={p.productsAlt}
-              width={700}
-              height={320}
+              width={1600}
+              height={558}
               loading="lazy"
               className="w-full rounded-sm object-cover shadow-luxe"
             />

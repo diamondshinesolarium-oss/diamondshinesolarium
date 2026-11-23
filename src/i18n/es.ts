@@ -61,7 +61,7 @@ export const es = {
     gallery: {
       title: "Galería | Diamond Shine Solarium, Puerto Banús",
       description:
-        "Fotografías del centro de bronceado Diamond Shine en Marina Banús, Marbella: recepción, zona de espera y cabinas.",
+        "Fotografías del centro de bronceado Diamond Shine en Marina Banús, Marbella: fachada, recepción, cabinas y cosmética.",
     },
     faq: {
       title: "Preguntas frecuentes sobre el bronceado en cabina | Diamond Shine",
@@ -140,7 +140,7 @@ export const es = {
     },
     note: "La disponibilidad de cada función depende de la cabina. Consúltanos en recepción.",
     imageAlt: "Cabina de bronceado Megasun con iluminación rosa en Diamond Shine",
-    image2Alt: "Cabina Megasun con pantalla táctil en Diamond Shine, Puerto Banús",
+    image2Alt: "Cabina Megasun K11 con luces LED en Diamond Shine, Puerto Banús",
   },
   pricing: {
     eyebrow: "03 — Opciones y tarifas",
@@ -186,11 +186,15 @@ export const es = {
     heading: "Nuestro centro.",
     intro: "Fotografías reales de Diamond Shine en Marina Banús.",
     alts: {
-      reception: "Recepción con escalera iluminada, obras de arte pop y logotipo de Diamond Shine",
-      lounge: "Zona de espera con sofás fucsia, recepción y expositor de cosmética solar",
-      tanningBed: "Cabina de bronceado Megasun abierta con iluminación rosa",
-      cabin: "Cabina de bronceado Megasun con pantalla táctil y luz roja",
+      facade: "Fachada de Diamond Shine Solarium en Puerto Banús con el rótulo luminoso",
+      tanningBed: "Cabina de bronceado Megasun abierta con iluminación rosa y pantalla táctil",
+      reception: "Recepción con escalera iluminada en turquesa, obras de arte pop y logotipo de Diamond Shine",
+      k11Blue: "Cabina Megasun K11 con luces LED azules y rosas",
       corridor: "Pasillo con iluminación turquesa hacia las salas de bronceado privadas",
+      counter: "Mostrador de recepción con diamante de neón azul y expositor de cosmética solar",
+      cabinRed: "Sala de bronceado Megasun con luz roja y LED violeta",
+      products: "Estantería con cosmética de bronceado profesional",
+      k11Gold: "Cabina Megasun K11 con luz cálida y pantalla táctil",
     },
   },
   reviews: {
@@ -310,7 +314,7 @@ export const es = {
     studio: { eyebrow: "El centro", title: "Diamond Shine, Puerto Banús", text: "Un espacio dedicado al bronceado en cabina, con atención personalizada desde 2013." },
     technology: { eyebrow: "Tecnología", title: "Nuestras cabinas", text: "Cabinas profesionales Megasun P9S, K7S y K11 para un bronceado adaptado a cada piel." },
     prices: { eyebrow: "Tarifas", title: "Opciones de bronceado", text: "Sesiones por minuto desde 1,20 € y bonos con crédito extra." },
-    gallery: { eyebrow: "Galería", title: "Dentro de Diamond Shine", text: "Recepción, zona de espera y cabinas de nuestro centro en Marina Banús." },
+    gallery: { eyebrow: "Galería", title: "Dentro de Diamond Shine", text: "Fachada, recepción y cabinas de nuestro centro en Marina Banús." },
     faq: { eyebrow: "FAQ", title: "Preguntas frecuentes", text: "Respuestas claras antes de tu primera sesión." },
     contact: { eyebrow: "Contacto", title: "Visítanos en Puerto Banús", text: "Estamos en Marina Banús. Escríbenos, llámanos o ven a vernos." },
     safety: { eyebrow: "Seguridad UV", title: "Información y precauciones", text: "Lo que debes saber sobre la exposición a la radiación ultravioleta." },

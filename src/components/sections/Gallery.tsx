@@ -9,19 +9,22 @@ import { LocalLink } from "@/components/site/LocalLink";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
+// 12-column mosaic for the 9 photos; the first 4 also form a complete block for the preview.
 const LAYOUT = [
-  "md:col-span-8 md:row-span-2",
-  "md:col-span-4",
-  "md:col-span-4",
-  "md:col-span-4",
+  "row-span-2 md:col-span-4",
   "md:col-span-8",
-  "md:col-span-4",
+  "row-span-2 md:col-span-4 md:row-span-1",
+  "row-span-2 md:col-span-4 md:row-span-1",
+  "row-span-2 md:col-span-4",
+  "row-span-2 md:col-span-4",
+  "row-span-2 md:col-span-4",
   "md:col-span-8",
+  "row-span-2 md:col-span-4 md:row-span-1",
 ];
 
 export function Gallery({ preview = false }: { preview?: boolean }) {
   const t = useT();
-  const images = preview ? galleryImages.slice(0, 5) : galleryImages;
+  const images = preview ? galleryImages.slice(0, 4) : galleryImages;
   const [index, setIndex] = useState<number | null>(null);
   const current = index !== null ? images[index] : null;
   const step = (d: number) => setIndex((i) => (i === null ? i : (i + d + images.length) % images.length));

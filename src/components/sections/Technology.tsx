@@ -26,10 +26,10 @@ export function Technology() {
         <div className="mt-16 grid gap-6 md:grid-cols-12">
           <Reveal className="overflow-hidden rounded-sm md:col-span-8">
             <img
-              src={salonPhotos.tanningBed.url}
+              src={salonPhotos.tanningBed}
               alt={t.technology.imageAlt}
-              width={1040}
-              height={709}
+              width={1600}
+              height={1200}
               loading="lazy"
               className="aspect-[16/9] h-full w-full object-cover transition-transform duration-[2s] ease-[var(--ease-luxe)] hover:scale-105"
             />
@@ -47,7 +47,7 @@ export function Technology() {
               ))}
             </ul>
             <div className="mt-10 overflow-hidden rounded-sm">
-              <img src={salonPhotos.cabin.url} alt={t.technology.image2Alt} width={1150} height={705} loading="lazy" className="aspect-[16/9] w-full object-cover" />
+              <img src={salonPhotos.k11Blue} alt={t.technology.image2Alt} width={1200} height={1600} loading="lazy" className="aspect-[16/9] w-full object-cover" />
             </div>
           </Reveal>
         </div>

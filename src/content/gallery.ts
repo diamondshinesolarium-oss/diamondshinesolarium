@@ -1,19 +1,29 @@
-import lounge from "@/assets/salon/lounge.jpg.asset.json";
-import reception from "@/assets/salon/reception.jpg.asset.json";
-import tanningBed from "@/assets/salon/tanning-bed.jpg.asset.json";
-import cabin from "@/assets/salon/cabin.jpg.asset.json";
-import corridor from "@/assets/salon/corridor.jpg.asset.json";
-import products from "@/assets/salon/products.jpg.asset.json";
+// Studio photos are bundled with the site (not CDN pointers) so they load on every host, Vercel included.
+import facade from "@/assets/studio/facade.jpg";
+import reception from "@/assets/studio/reception.jpg";
+import counter from "@/assets/studio/counter.jpg";
+import corridor from "@/assets/studio/corridor.jpg";
+import tanningBed from "@/assets/studio/tanning-bed.jpg";
+import cabinRed from "@/assets/studio/cabin-red.jpg";
+import k11Gold from "@/assets/studio/k11-gold.jpg";
+import k11Blue from "@/assets/studio/k11-blue.jpg";
+import products from "@/assets/studio/products.jpg";
+
+const PORTRAIT = { width: 1200, height: 1600 } as const;
 
 /** Current photos of the Diamond Shine studio, supplied by the owner (Nov 2026). */
 export const galleryImages = [
-  { key: "reception", src: reception.url, width: 1203, height: 715 },
-  { key: "tanningBed", src: tanningBed.url, width: 1040, height: 709 },
-  { key: "cabin", src: cabin.url, width: 1150, height: 705 },
-  { key: "corridor", src: corridor.url, width: 1167, height: 706 },
-  { key: "lounge", src: lounge.url, width: 1600, height: 683 },
+  { key: "facade", src: facade, ...PORTRAIT },
+  { key: "tanningBed", src: tanningBed, width: 1600, height: 1200 },
+  { key: "reception", src: reception, ...PORTRAIT },
+  { key: "k11Blue", src: k11Blue, ...PORTRAIT },
+  { key: "corridor", src: corridor, ...PORTRAIT },
+  { key: "counter", src: counter, ...PORTRAIT },
+  { key: "cabinRed", src: cabinRed, ...PORTRAIT },
+  { key: "products", src: products, width: 1600, height: 558 },
+  { key: "k11Gold", src: k11Gold, ...PORTRAIT },
 ] as const;
 
 export type GalleryKey = (typeof galleryImages)[number]["key"];
 
-export const salonPhotos = { lounge, reception, tanningBed, cabin, corridor, products };
+export const salonPhotos = { facade, reception, counter, corridor, tanningBed, cabinRed, k11Gold, k11Blue, products };
