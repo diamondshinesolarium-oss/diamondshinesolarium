@@ -16,7 +16,8 @@ export function Footer() {
   const linkCls = "text-sm text-ink-muted transition-colors hover:text-neon";
 
   return (
-    <footer className="grain relative border-t border-ink-line bg-ink text-ink-foreground">
+    <footer className="grain relative bg-ink text-ink-foreground">
+      <span className="led-line absolute inset-x-0 top-0" aria-hidden="true" />
       <div className="container-luxe py-20 md:py-24">
         <div className="grid gap-14 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">

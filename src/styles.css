@@ -343,13 +343,13 @@
     position: absolute;
     inset: -1px;
     border-radius: inherit;
-    padding: 1px;
+    padding: 1.5px;
     pointer-events: none;
     background: conic-gradient(
       from var(--neon-angle),
       transparent 0deg,
-      transparent 250deg,
-      color-mix(in oklab, var(--neon) 50%, transparent) 300deg,
+      transparent 220deg,
+      color-mix(in oklab, var(--neon) 55%, transparent) 290deg,
       var(--neon-hover) 340deg,
       transparent 360deg
     );

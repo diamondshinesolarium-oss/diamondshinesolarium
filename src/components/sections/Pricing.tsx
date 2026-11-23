@@ -50,9 +50,10 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
 
         {/* Pay by the minute */}
         <Reveal className="mt-16 md:mt-20">
-          <div className="flex flex-col gap-2 border-b border-border pb-6 md:flex-row md:items-end md:justify-between">
+          <div className="relative flex flex-col gap-2 pb-6 md:flex-row md:items-end md:justify-between">
             <h3 className="text-3xl md:text-4xl">{p.sessionsTitle}</h3>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground">{p.sessionsText}</p>
+            <span className="led-line absolute inset-x-0 bottom-0" aria-hidden="true" />
           </div>
         </Reveal>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -60,7 +61,7 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
             <Reveal
               key={c.key}
               delay={i * 100}
-              className="flex flex-col rounded-sm border border-border bg-card p-8 hover:border-neon/50 transition-all duration-700 ease-[var(--ease-luxe)] hover:-translate-y-1 hover:shadow-luxe"
+              className="card-neon flex flex-col rounded-sm border border-border bg-card p-8 hover:-translate-y-1"
             >
               <span className="eyebrow text-neon">{p.cabin}</span>
               <h4 className="mt-3 text-[1.75rem] leading-tight">{c.name}</h4>
@@ -77,9 +78,10 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
 
         {/* Prepaid packages */}
         <Reveal className="mt-20 md:mt-28">
-          <div className="flex flex-col gap-2 border-b border-border pb-6 md:flex-row md:items-end md:justify-between">
+          <div className="relative flex flex-col gap-2 pb-6 md:flex-row md:items-end md:justify-between">
             <h3 className="text-3xl md:text-4xl">{p.packagesTitle}</h3>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground">{p.packagesText}</p>
+            <span className="led-line absolute inset-x-0 bottom-0" aria-hidden="true" />
           </div>
         </Reveal>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -90,12 +92,12 @@ export function Pricing({ showProducts = true }: { showProducts?: boolean }) {
                 key={pkg.size}
                 delay={i * 100}
                 className={cn(
-                  "relative flex flex-col rounded-sm border p-8 transition-all duration-700 ease-[var(--ease-luxe)] hover:-translate-y-1 hover:shadow-luxe",
-                  featured ? "border-neon/60 bg-panel text-ink-foreground shadow-neon-soft" : "border-border bg-card hover:border-neon/50",
+                  "card-neon relative flex flex-col rounded-sm border p-8 hover:-translate-y-1",
+                  featured ? "neon-border border-neon/40 bg-panel text-ink-foreground shadow-neon-soft" : "border-border bg-card",
                 )}
               >
                 {featured && (
-                  <span className="bg-neon-gradient eyebrow absolute -top-3 left-8 px-3 py-1.5 text-[0.6rem] text-ink">{p.bestValue}</span>
+                  <span className="bg-neon-gradient eyebrow neon-pulse absolute -top-3 left-8 z-10 px-3 py-1.5 text-[0.6rem] text-ink">{p.bestValue}</span>
                 )}
                 <h4 className="text-[1.75rem] leading-tight">{fill(p.packageName, { size: pkg.size })}</h4>
 

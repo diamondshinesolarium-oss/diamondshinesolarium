@@ -6,6 +6,7 @@
 - [x] sitemap.xml (16 pages, ES + EN) + Sitemap line in robots.txt for diamondshine.es
 - [x] Instagram updated everywhere to @diamondshinemarbella
 - [x] Real price list: 3 cabins per minute + packages S/M/L (no memberships)
+- [x] Neon LED animations (buttons, borders, particles, cards, LED lines, pulsing icons) with reduced-motion support
 - [ ] Legal pages owner data (company name, NIF) — blocked: owner must provide
 - [x] Email: diamondshinesolariumbanus@gmail.com
 - [x] Current studio photos + Megasun P9S/K7S/K11 equipment

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { BookButton } from "@/components/site/BookButton";
 import { LocalLink } from "@/components/site/LocalLink";
 import heroImg from "@/assets/hero-golden-skin.jpg";
+import { NeonParticles } from "@/components/site/NeonParticles";
 
 export function Hero() {
   const t = useT();
@@ -20,10 +21,11 @@ export function Hero() {
       <div className="bg-ink-fade absolute inset-0 -z-10" aria-hidden="true" />
       <div className="bg-ink-bottom absolute inset-0 -z-10" aria-hidden="true" />
       <div className="bg-neon-glow absolute inset-0 -z-10" aria-hidden="true" />
+      <NeonParticles count={18} />
 
       <div className="container-luxe pb-20 pt-40 md:pb-28">
         <p className="eyebrow fade-up flex items-center gap-4 text-neon" style={{ animationDelay: "200ms" }}>
-          <span className="h-px w-12 bg-neon" aria-hidden="true" />
+          <span className="led-line w-12" aria-hidden="true" />
           {t.hero.eyebrow}
         </p>
         <h1 className="fade-up mt-8 max-w-4xl text-[3.4rem] leading-[0.95] sm:text-7xl md:text-8xl lg:text-[8.5rem]" style={{ animationDelay: "350ms" }}>

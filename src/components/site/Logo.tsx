@@ -4,7 +4,7 @@ import { DiamondMark } from "./icons";
 export function Logo({ className, compact = false }: { className?: string; compact?: boolean }) {
   return (
     <span className={cn("inline-flex items-center gap-3", className)}>
-      <DiamondMark className="icon-glow h-7 w-7 text-neon" />
+      <DiamondMark className="neon-pulse h-7 w-7 text-neon" />
       <span className="flex flex-col leading-none">
         <span className="font-sans text-[0.95rem] font-normal tracking-[0.42em] uppercase">Diamond Shine</span>
         {!compact && (

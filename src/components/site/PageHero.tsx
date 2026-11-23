@@ -15,11 +15,11 @@ export function PageHero({ eyebrow, title, text, image = heroImg }: { eyebrow: s
       />
       <div className="bg-ink-fade absolute inset-0 -z-10" aria-hidden="true" />
       <div className="bg-neon-glow absolute inset-0 -z-10" aria-hidden="true" />
-      <div className="hairline absolute inset-x-0 bottom-0 opacity-60" aria-hidden="true" />
+      <div className="led-line absolute inset-x-0 bottom-0" aria-hidden="true" />
       <div className="container-luxe">
         <Reveal>
           <p className="eyebrow flex items-center gap-4 text-neon">
-            <span className="h-px w-10 bg-neon" aria-hidden="true" />
+            <span className="led-line w-10" aria-hidden="true" />
             {eyebrow}
           </p>
           <h1 className="mt-6 max-w-4xl text-5xl leading-[1.02] md:text-7xl">{title}</h1>

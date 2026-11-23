@@ -31,12 +31,12 @@ export function Reviews() {
           </div>
         </Reveal>
 
-        <Reveal delay={150} className="border border-ink-line p-10 text-center md:p-14">
+        <Reveal delay={150} className="neon-border border border-ink-line p-10 text-center md:p-14">
           <p className="eyebrow text-ink-muted">{t.reviews.ratingLabel}</p>
           <p className="mt-6 font-display text-8xl leading-none md:text-9xl">
             {rating.toLocaleString(t.meta.htmlLang, { minimumFractionDigits: 1 })}
           </p>
-          <div className="mt-6 flex justify-center gap-1.5" aria-label={`${rating} / 5`}>
+          <div className="neon-pulse mt-6 flex justify-center gap-1.5" aria-label={`${rating} / 5`}>
             {[1, 2, 3, 4, 5].map((n) => (
               <Star
                 key={n}
