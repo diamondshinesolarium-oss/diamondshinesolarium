@@ -1,3 +1,4 @@
+import type React from "react";
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import { site } from "@/content/site";
 
@@ -14,7 +15,10 @@ type Ctx = {
   closeSettings: () => void;
 };
 
-const ConsentContext = createContext<Ctx | null>(null);
+// Kept on globalThis so a hot reload of this file reuses the same context instead of
+// creating a new one that the already-mounted provider doesn't supply (blank screen).
+const g = globalThis as typeof globalThis & { __dsConsentContext?: React.Context<Ctx | null> };
+const ConsentContext = (g.__dsConsentContext ??= createContext<Ctx | null>(null));
 
 export function ConsentProvider({ children }: { children: ReactNode }) {
   const [consent, setConsent] = useState<Consent>(DEFAULT);
