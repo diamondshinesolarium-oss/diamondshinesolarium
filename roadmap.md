@@ -8,6 +8,6 @@
 - [x] Real price list: 3 cabins per minute + packages S/M/L (no memberships)
 - [x] Neon LED animations (buttons, borders, particles, cards, LED lines, pulsing icons) with reduced-motion support
 - [ ] Legal pages owner data (company name, NIF) — blocked: owner must provide
-- [x] Email: diamondshinesolariumbanus@gmail.com
+- [x] Email: diamondshinepb@gmail.com
 - [x] Current studio photos + Megasun P9S/K7S/K11 equipment
 - [ ] Google Analytics 4 ID and Search Console code — blocked: owner accounts

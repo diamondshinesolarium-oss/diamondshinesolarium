@@ -52,7 +52,7 @@ export const en: Dict = {
     technology: {
       title: "Megasun Tanning Beds in Marbella | Diamond Shine",
       description:
-        "Professional Megasun P9S, K7S and K11 tanning beds in Puerto Banús, with air conditioning, music, aquaflash and aroma.",
+        "Professional Megasun P9S, K7S and K11 tanning beds in Puerto Banús, with air conditioning, music, Aquafresh and aroma.",
     },
     prices: {
       title: "Indoor Tanning Prices in Marbella | Diamond Shine Solarium",
@@ -133,7 +133,7 @@ export const en: Dict = {
     features: {
       air: { title: "Air conditioning", text: "Ventilation and cooling for a more pleasant session." },
       music: { title: "Music", text: "A soundtrack to help you switch off during your session." },
-      aquaflash: { title: "Aquaflash", text: "A refreshing mist in equipped tanning beds." },
+      aquafresh: { title: "Aquafresh", text: "A refreshing mist in equipped tanning beds." },
       aroma: { title: "Aroma", text: "Subtle scents to complete the experience." },
     },
     note: "Features vary by tanning bed. Ask at reception.",
@@ -248,11 +248,11 @@ export const en: Dict = {
     items: [
       {
         q: "How does indoor tanning work?",
-        a: "When you arrive, our team asks about your skin type, previous tanning experience and goals, then recommends a tanning bed and exposure time. You go into a private room, put on protective goggles, and the bed switches off automatically at the end of the programmed time.",
+        a: "When you arrive, you pay for the session and our team asks about your skin type, previous tanning experience and goals, then recommends a tanning bed and exposure time. You go into a private room, put on protective goggles, and the bed switches off automatically at the end of the programmed time.",
       },
       {
-        q: "Do I need to book in advance?",
-        a: "We recommend messaging us on WhatsApp or calling before you come to confirm availability, especially in high season. We're open Monday to Saturday, 10:00–21:00.",
+        q: "Do I need an appointment?",
+        a: "No appointment is needed: just send us a WhatsApp message or give us a call if you prefer. We're open Monday to Saturday, 10:00–21:00.",
       },
       {
         q: "What tanning options do you offer?",

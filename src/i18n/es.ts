@@ -51,7 +51,7 @@ export const es = {
     technology: {
       title: "Cabinas de bronceado Megasun en Marbella | Diamond Shine",
       description:
-        "Cabinas de bronceado profesionales Megasun P9S, K7S y K11 en Puerto Banús, con climatización, música, aquaflash y aroma.",
+        "Cabinas de bronceado profesionales Megasun P9S, K7S y K11 en Puerto Banús, con climatización, música, Aquafresh y aroma.",
     },
     prices: {
       title: "Tarifas de bronceado en cabina en Marbella | Diamond Shine",
@@ -135,7 +135,7 @@ export const es = {
     features: {
       air: { title: "Climatización", text: "Ventilación y aire acondicionado para una sesión más agradable." },
       music: { title: "Música", text: "Ambiente sonoro para desconectar durante tu sesión." },
-      aquaflash: { title: "Aquaflash", text: "Bruma refrescante disponible en las cabinas equipadas." },
+      aquafresh: { title: "Aquafresh", text: "Bruma refrescante disponible en las cabinas equipadas." },
       aroma: { title: "Aroma", text: "Notas aromáticas sutiles para completar la experiencia." },
     },
     note: "La disponibilidad de cada función depende de la cabina. Consúltanos en recepción.",
@@ -252,11 +252,11 @@ export const es = {
     items: [
       {
         q: "¿Cómo funciona una sesión de bronceado?",
-        a: "Al llegar, nuestro equipo te pregunta por tu tipo de piel, tu experiencia previa y tus objetivos. Con esa información te recomienda una cabina y un tiempo de exposición. Pasas a una sala privada, te colocas las gafas protectoras y la cabina se apaga automáticamente al terminar el tiempo programado.",
+        a: "Al llegar, realizas el pago de la sesión y nuestro equipo te pregunta por tu tipo de piel, tu experiencia previa y tus objetivos. Con esa información te recomienda una cabina y un tiempo de exposición. Pasas a una sala privada, te colocas las gafas protectoras y la cabina se apaga automáticamente al terminar el tiempo programado.",
       },
       {
-        q: "¿Necesito reservar con antelación?",
-        a: "Te recomendamos escribirnos por WhatsApp o llamarnos antes de venir para confirmar la disponibilidad, especialmente en temporada alta. Abrimos de lunes a sábado de 10:00 a 21:00.",
+        q: "¿Necesito cita previa?",
+        a: "No necesitas cita previa: basta con enviarnos un mensaje por WhatsApp o, si lo prefieres, hacernos una llamada. Abrimos de lunes a sábado de 10:00 a 21:00.",
       },
       {
         q: "¿Qué opciones de bronceado ofrecen?",

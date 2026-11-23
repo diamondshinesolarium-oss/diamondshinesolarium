@@ -24,7 +24,7 @@ describe("business data", () => {
   });
 
   it("publishes the email the owner confirmed", () => {
-    expect(site.email).toBe("diamondshinesolariumbanus@gmail.com");
+    expect(site.email).toBe("diamondshinepb@gmail.com");
   });
 
   it("lists the Megasun tanning beds P9S, K7S and K11 and no old brands", () => {

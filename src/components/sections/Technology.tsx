@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import lightImg from "@/assets/golden-light-lines.jpg";
 import { NeonParticles } from "@/components/site/NeonParticles";
 
-const ICONS = { air: Wind, music: AudioLines, aquaflash: Droplets, aroma: Flower2 } as const;
+const ICONS = { air: Wind, music: AudioLines, aquafresh: Droplets, aroma: Flower2 } as const;
 
 export function Technology() {
   const t = useT();
